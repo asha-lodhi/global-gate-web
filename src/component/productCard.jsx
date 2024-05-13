@@ -38,8 +38,23 @@ const productCard = () => {
               </svg>
             </div>
           </div>
-          <div>Basmati rice</div>
-          <div>rs 2649</div>
+          <div className="my-1">Basmati rice</div>
+          <div class="flex items-center  px-2 gap-1 h-[20px] rounded">
+            <div className="flex">
+              <svg
+                class="w-6 h-5 text-black font-bold"
+                xmlns="http://www.w3.org/2000/svg"
+                //   height="24px"
+                viewBox="0 -960 960 960"
+                //   width="24px"
+                fill="currentColor"
+              >
+                <path d="M549-120 280-400v-80h140q53 0 91.5-34.5T558-600H240v-80h306q-17-35-50.5-57.5T420-760H240v-80h480v80H590q14 17 25 37t17 43h88v80h-81q-8 85-70 142.5T420-400h-29l269 280H549Z" />
+              </svg>
+              <span className="font-bold">2,649</span>
+            </div>
+            <span className="text-green-400">24% off</span>
+          </div>
         </div>
       </div>
     </>
