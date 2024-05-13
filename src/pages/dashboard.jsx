@@ -1,11 +1,12 @@
 import React from "react";
-import HeroSection from "../component/heroSection";
 import Products from "../component/products";
 import AboutSection from "../component/about";
+import HomeSection from "../component/heroSection";
+
 const dashboard = () => {
   return (
     <>
-      <HeroSection />
+      <HomeSection />
       <AboutSection />
       <Products />
     </>

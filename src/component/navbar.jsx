@@ -5,8 +5,8 @@ import user from "../assets/user-image.jpeg";
 const navbar = () => {
   return (
     <>
-      <nav class="bg-transparent">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 bg-transparent">
+      <nav class="bg-transparent z-10">
+        <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto bg-transparent">
           <span className="flex items-center space-x-3">
             <img src={MainLogo} className="h-32 w-36" alt="Logo" />
           </span>
