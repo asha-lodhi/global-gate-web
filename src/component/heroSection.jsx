@@ -5,11 +5,11 @@ import Navbar from "./navbar";
 const HeroSection = () => {
   return (
     <>
-      <div className=" flex w-full h-1/2  relative  justify-start items-center ">
+      <div className="flex w-full h-1/2  relative  justify-start items-center ">
         <img
           src={HeroImage}
           alt="services"
-          className="w-full h-[800px] object-cover opacity-90"
+          className="w-full h-screen object-cover opacity-90"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-transparent">
           <Navbar />
