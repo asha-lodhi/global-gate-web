@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../component/navbar";
 import HeroSection from "../component/heroSection";
+import Products from "../component/products";
 const dashboard = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <HeroSection />
+      <Products />
     </>
   );
 };
