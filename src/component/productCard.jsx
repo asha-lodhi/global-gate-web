@@ -1,13 +1,15 @@
 import React from "react";
-import { SwiperSlide } from "swiper/react";
-import Food from "../assets/product/food-img-1.jpeg";
 
-const productCard = () => {
+const productCard = ({ productImage }) => {
   return (
     <>
-      <div class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 overflow-hidden">
-        <img class="w-full my-10" src={Food} alt="food-img" />
-        <div class="px-3 py-3 border border-gray-400 overflow-hidden rounded-b">
+      <div class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 ">
+        <img
+          class="w-full my-10 px-2 h-auto object-contain"
+          src={productImage}
+          alt="food-img"
+        />
+        <div class="px-3 py-3 border border-gray-400 overflow-hidden rounded-b bg-white">
           <div className="flex  justify-between items-center">
             <div className="flex">
               <div class="flex items-center bg-[#00B6B7] px-2 gap-1 h-[20px] rounded">
@@ -38,22 +40,25 @@ const productCard = () => {
               </svg>
             </div>
           </div>
-          <div className="my-1">Basmati rice</div>
-          <div class="flex items-center  px-2 gap-1 h-[20px] rounded">
+          <div className="my-2">Basmati rice</div>
+          <div class="flex items-center  gap-4 ">
             <div className="flex">
               <svg
-                class="w-6 h-5 text-black font-bold"
+                class="w-6 h-5 text-black"
                 xmlns="http://www.w3.org/2000/svg"
-                //   height="24px"
                 viewBox="0 -960 960 960"
-                //   width="24px"
                 fill="currentColor"
+                stroke="currentColor"
+                stroke-width="20"
               >
                 <path d="M549-120 280-400v-80h140q53 0 91.5-34.5T558-600H240v-80h306q-17-35-50.5-57.5T420-760H240v-80h480v80H590q14 17 25 37t17 43h88v80h-81q-8 85-70 142.5T420-400h-29l269 280H549Z" />
               </svg>
               <span className="font-bold">2,649</span>
             </div>
-            <span className="text-green-400">24% off</span>
+            <span className="text-gray-400 line-through">3,499</span>
+            <span className="text-green-600 text-sm font-semibold">
+              24% off
+            </span>
           </div>
         </div>
       </div>

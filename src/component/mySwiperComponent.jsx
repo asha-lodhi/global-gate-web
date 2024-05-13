@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProductCard from "./productCard";
 
-const MySwiperComponent = () => {
+const MySwiperComponent = ({ productImage }) => {
   return (
     <Swiper
       spaceBetween={10}
@@ -38,7 +38,7 @@ const MySwiperComponent = () => {
     >
       {[1, 2, 3, 4, 5, 6, 7].map((i, index) => (
         <SwiperSlide key={index}>
-          <ProductCard />
+          <ProductCard productImage={productImage} />
         </SwiperSlide>
       ))}
     </Swiper>
