@@ -6,8 +6,8 @@ const dashboard = () => {
   return (
     <>
       <HeroSection />
-      <Products />
       <AboutSection />
+      <Products />
     </>
   );
 };

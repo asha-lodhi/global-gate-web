@@ -3,7 +3,7 @@ import MySwiperComponent from "./mySwiperComponent";
 
 const products = () => {
   return (
-    <div className=" bg-white my-10">
+    <div className="mt-56 bg-white pb-10">
       <div className="flex justify-center items-center">
         <h2 className="flex font-sans text-[48px] md:text-[60px] lmd:text-[48px] z-10 text-[#347CA4] xxmd:text-[60px] xxmd:w-[80%]">
           products

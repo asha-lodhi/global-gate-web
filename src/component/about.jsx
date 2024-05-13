@@ -21,15 +21,19 @@ const AboutSection = () => {
         <div>
           <h1 className='text-[60px] font-bold text-white pt-8'>Ai-Powered Market Insights</h1>
         </div>
-        <div className='flex w-full flex-wrap items-center justify-center gap-8 mt-10'>
+        <div className='flex w-[90%] flex-wrap justify-center gap-10 mt-10'>
           {InsightsData.map((item, index) => (
-            <div key={index} className='flex w-[28%] p-2'>
-              <div className='flex w-[55px] h-[55px] bg-[#8FD5FC] rounded-[10px] border-[#DED72B] border-2 justify-center items-center text-black text-[32px] font-semibold'>
-                {index + 1}
-              </div>
-              <div className='flex-col pl-5'>
-                <p className='text-[28px] text-[#FDCBCB] font-semibold'>{item.title}</p>
-                <p className='text-[16px] text-white font-medium'>{item.subTitle}</p>
+            <div key={index} className='w-[28%]'>
+              <div className='flex flex-row'>
+                <div className='mr-5 flex flex-col'>
+                  <div className='w-[50px] h-[50px] bg-[#8FD5FC] rounded-[10px] border-[#DED72B] border-2 text-center text-black text-[32px] font-semibold'>
+                    {index + 1}
+                  </div>
+                </div>
+                <div className='flex-col flex-grow'>
+                  <p className='text-[32px] text-[#FDCBCB] font-bold'>{item.title}</p>
+                  <p className='text-[18px] text-white font-medium'>{item.subTitle}</p>
+                </div>
               </div>
             </div>
           ))}
