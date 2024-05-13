@@ -5,8 +5,8 @@ import user from "../assets/user-image.jpeg";
 const navbar = () => {
   return (
     <>
-      <nav class="bg-[#24323f]">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 bg-[#24323f]">
+      <nav class="bg-transparent">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 bg-transparent">
           <span className="flex items-center space-x-3">
             <img src={MainLogo} className="h-32 w-36" alt="Logo" />
           </span>
@@ -15,7 +15,7 @@ const navbar = () => {
               class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
               id="navbar-user"
             >
-              <ul class=" flex align-middle  justify-center items-center flex-col text-xl p-4 md:p-0  border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-[#24323f]">
+              <ul class=" flex align-middle  justify-center items-center flex-col text-xl p-4 md:p-0  border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent">
                 <li>
                   <span
                     className="block py px-3 text-white hover:underline hover:text-blue-700 rounded md:bg-transparent md:p-0 md:dark:text-white"
@@ -45,7 +45,7 @@ const navbar = () => {
                   </span>
                 </li>
                 <div
-                  class="z-50 hidden my-4 text-base list-none bg-[#24323f] divide-y divide-gray-100 rounded-lg shadow dark:bg-[#24323f] dark:divide-gray-600"
+                  class="z-50 hidden my-4 text-base list-none bg-transparent divide-y divide-gray-100 rounded-lg shadow dark:bg-transparent dark:divide-gray-600"
                   id="user-dropdown"
                 >
                   <div class="px-4 py-3">
@@ -58,12 +58,12 @@ const navbar = () => {
                   </div>
                   <ul class="py-2 " aria-labelledby="user-menu-button">
                     <li>
-                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#24323f] dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-transparent dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
                         Dashboard
                       </span>
                     </li>
                     <li>
-                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#24323f] dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-transparent dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
                         Settings
                       </span>
                     </li>
@@ -81,7 +81,7 @@ const navbar = () => {
                 </div>
                 <button
                   type="button"
-                  class="flex text-sm bg-[#24323f] rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  class="flex text-sm bg-transparent rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                   id="user-menu-button"
                   aria-expanded="false"
                   data-dropdown-toggle="user-dropdown"

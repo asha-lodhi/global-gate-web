@@ -4,7 +4,7 @@ import HeroSection from "../component/heroSection";
 const dashboard = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
     </>
   );
