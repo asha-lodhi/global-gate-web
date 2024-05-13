@@ -1,9 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const productCard = ({ productImage }) => {
+const ProductCard = ({ productImage }) => {
+  const navigate = useNavigate();
   return (
     <>
-      <div class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 ">
+      <div
+        class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 "
+        onClick={() => navigate(`/product-details/${123456}`)}
+      >
         <img
           class="w-full my-10 px-2 h-auto object-contain"
           src={productImage}
@@ -66,4 +71,4 @@ const productCard = ({ productImage }) => {
   );
 };
 
-export default productCard;
+export default ProductCard;

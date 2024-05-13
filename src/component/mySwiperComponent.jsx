@@ -16,8 +16,8 @@ const MySwiperComponent = ({ productImage }) => {
   return (
     <Swiper
       spaceBetween={10}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      //   onSlideChange={() => console.log("slide change")}
+      //   onSwiper={(swiper) => console.log(swiper)}
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       //   navigation
       //   pagination={{ clickable: true, dynamicBullets: true }}
