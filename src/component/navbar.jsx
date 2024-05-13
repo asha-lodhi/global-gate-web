@@ -6,7 +6,7 @@ const navbar = () => {
   return (
     <>
       <nav class="bg-transparent z-10">
-        <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto bg-transparent">
+        <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent">
           <span className="flex items-center space-x-3">
             <img src={MainLogo} className="h-32 w-36" alt="Logo" />
           </span>

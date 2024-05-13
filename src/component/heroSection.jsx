@@ -12,7 +12,7 @@ const HomeSection = () => {
           className="w-full h-screen object-cover opacity-90 absolute z-[0]"
         />
         <Navbar />
-        <div className="max-w-screen-2xl flex-col flex flex-wrap justify-center mx-auto w-full z-10 h-4/5">
+        <div className="w-[90%] flex-col flex flex-wrap justify-center mx-auto z-10 h-4/5">
           <span className="w-full md:w-[966px] text-[45px] md:text-[90px] font-sans font-semibold text-white">
             Global B2B food & drink
           </span>
