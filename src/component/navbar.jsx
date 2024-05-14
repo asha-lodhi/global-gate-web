@@ -15,32 +15,32 @@ const navbar = () => {
               class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
               id="navbar-user"
             >
-              <ul class=" flex align-middle  justify-center items-center flex-col text-xl p-4 md:p-0  border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent">
-                <li>
+              <ul class="group header-nav-bar flex align-middle  justify-center items-center flex-col text-xl p-4 md:p-0  border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent">
+                <li className="header-nav-bar">
                   <span
-                    className="block py px-3 text-white hover:underline hover:text-blue-700 rounded md:bg-transparent md:p-0 md:dark:text-white"
+                    className="block py px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation"
                     aria-current="page"
                   >
                     Home
                   </span>
                 </li>
-                <li>
-                  <span className="block py-2 px-3 text-white hover:underline hover:text-blue-700 rounded md:bg-transparent md:p-0 md:dark:text-white">
+                <li className="header-nav-bar">
+                  <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     About
                   </span>
                 </li>
-                <li>
-                  <span className="block py-2 px-3 text-white hover:underline hover:text-blue-700 rounded md:bg-transparent md:p-0 md:dark:text-white">
+                <li className="header-nav-bar">
+                  <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     Products
                   </span>
                 </li>
-                <li>
-                  <span className="block py-2 px-3 text-white hover:underline hover:text-blue-700 rounded md:bg-transparent md:p-0 md:dark:text-white">
+                <li className="header-nav-bar">
+                  <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     Services
                   </span>
                 </li>
-                <li>
-                  <span className="block py-2 px-3 text-white hover:underline hover:text-blue-700 rounded md:bg-transparent md:p-0 md:dark:text-white">
+                <li className="header-nav-bar">
+                  <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     Blogs
                   </span>
                 </li>

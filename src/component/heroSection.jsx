@@ -13,17 +13,17 @@ const HomeSection = () => {
         />
         <Navbar />
         <div className="w-[90%] flex-col flex flex-wrap justify-center mx-auto z-10 h-4/5">
-          <span className="w-full md:w-[966px] text-[45px] md:text-[90px] font-sans font-semibold text-white">
+          <span className="w-full text-[45px] md:text-[90px] font-semibold text-white font-sansation">
             Global B2B food & drink
           </span>
-          <span className="w-full md:w-[966px] text-[45px] md:text-[90px] font-sans font-semibold text-white -mt-8">
+          <span className="w-full text-[45px] md:text-[90px] font-sansation font-semibold text-white -mt-8">
             Marketplace
           </span>
-          <span className="text-sm md:text-base font-light text-white  text-start line-clamp-3 md:w-[678px] mt-4">
+          <span className="text-sm md:text-base font-light text-white text-start line-clamp-3 md:w-[678px] mt-4 font-sansation">
             Connecting food and beverage companies worldwide with AI-powered
             insights, efficient operations, and personalized experiences.
           </span>
-          <button className="text-[20px] w-[180px] bg-transparent text-white font-poppins px-8 py-1 rounded-md border-2 border-white mt-12">
+          <button className="text-[20px] w-[180px] bg-transparent text-white font-poppins px-8 py-1 rounded-md border-2 border-white mt-12 font-sansation">
             Explore
           </button>
         </div>
