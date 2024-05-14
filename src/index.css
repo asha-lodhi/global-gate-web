@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Sansation";
+    src: url("../public/fonts//Sansation-Regular.ttf");
+  }
+}
 
 body {
   margin: 0;
@@ -16,3 +22,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.header-nav-bar:after {
+  display:block;
+  content: '';
+  width: inherit;
+  border-bottom: solid 3px white;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.header-nav-bar:hover:after { 
+  transform: scaleX(1);
+  cursor: pointer;
+ }

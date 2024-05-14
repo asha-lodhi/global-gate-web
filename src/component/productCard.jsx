@@ -1,13 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
-const ProductCard = ({ productImage }) => {
+const ProductCard = ({productImage}) => {
   const navigate = useNavigate();
   return (
     <>
       <div
         class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 "
-        onClick={() => navigate(`/product-details/${123456}`)}
+        onClick={() => navigate(`/product-details/${ 123456 }`)}
       >
         <img
           class="w-full my-10 px-2 h-auto object-contain"
@@ -18,7 +18,7 @@ const ProductCard = ({ productImage }) => {
           <div className="flex  justify-between items-center">
             <div className="flex">
               <div class="flex items-center bg-[#00B6B7] px-2 gap-1 h-[20px] rounded">
-                <p class="text-sm font-normal text-white dark:text-white">
+                <p class="text-sm font-normal text-white dark:text-white font-sansation">
                   4.7
                 </p>
                 <svg
@@ -31,7 +31,7 @@ const ProductCard = ({ productImage }) => {
                   <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
               </div>
-              <span class="text-sm font-light text-black mx-2">73 reviews</span>
+              <span class="text-sm font-light text-black mx-2 font-sansation">73 reviews</span>
             </div>
             <div class="flex items-center  px-2 gap-1 h-[20px] rounded">
               <svg
@@ -45,7 +45,7 @@ const ProductCard = ({ productImage }) => {
               </svg>
             </div>
           </div>
-          <div className="my-2">Basmati rice</div>
+          <div className="my-2 font-sansation">Basmati rice</div>
           <div class="flex items-center  gap-4 ">
             <div className="flex">
               <svg
@@ -58,10 +58,10 @@ const ProductCard = ({ productImage }) => {
               >
                 <path d="M549-120 280-400v-80h140q53 0 91.5-34.5T558-600H240v-80h306q-17-35-50.5-57.5T420-760H240v-80h480v80H590q14 17 25 37t17 43h88v80h-81q-8 85-70 142.5T420-400h-29l269 280H549Z" />
               </svg>
-              <span className="font-bold">2,649</span>
+              <span className="font-bold font-sansation">2,649</span>
             </div>
-            <span className="text-gray-400 line-through">3,499</span>
-            <span className="text-green-600 text-sm font-semibold">
+            <span className="text-gray-400 line-through font-sansation">3,499</span>
+            <span className="text-green-600 text-sm font-semibold font-sansation">
               24% off
             </span>
           </div>
