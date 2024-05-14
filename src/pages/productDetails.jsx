@@ -20,7 +20,7 @@ const productDetails = () => {
       <SubNavbar />
       <div class="antialiased">
         <div class="py-6">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
             <div class="flex items-center space-x-2 text-gray-400 text-sm">
               <a href="#" class="hover:underline hover:text-gray-600">
                 <FaHome className="text-xl text-[#01b5b6]" />
@@ -83,14 +83,14 @@ const productDetails = () => {
 
           <div class="max-w-7xl max-lg:w-full mx-auto px-4 sm:px-6 lg:px-8 mt-6">
             <div class="flex flex-col md:flex-row -mx-4">
-              <div class="md:flex-1 px-4 py-4">
+              <div class="md:flex-1 px-4">
                 <div>
-                  <div class="flex h-64 md:h-96 rounded-lg bg-gray-100 mb-4 gap-2  items-center justify-center">
-                    <div class="w-48 h-64 md:h-96 rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
+                  <div class="relative flex h-64 md:h-auto rounded-lg bg-gray-100 mb-4 gap-2  items-center justify-center align-middle">
+                    <div class="w-40 h-64 md:h-96 rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
                       {subFood?.map((item, index) => (
                         <div
                           key={index}
-                          className="h-20 flex justify-center items-center"
+                          className="h-20  w-24 flex justify-center items-center"
                         >
                           <img
                             src={item.img}
@@ -100,13 +100,37 @@ const productDetails = () => {
                         </div>
                       ))}
                     </div>
-                    <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center align-middle ">
+                    <div class=" w-full  h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-center align-middle ">
                       <img
                         src={Food}
                         className="object-contain rounded"
                         alt="product"
                       />
                     </div>
+                    <span className="absolute top-2 right-2">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="1"
+                          y="1"
+                          width="28"
+                          height="28"
+                          stroke="#28942C"
+                          stroke-width="2"
+                        />
+                        <circle
+                          cx="15"
+                          cy="14.9999"
+                          r="6.66667"
+                          fill="#28942C"
+                        />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </div>
