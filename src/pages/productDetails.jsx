@@ -2,7 +2,7 @@ import React from "react";
 import SubNavbar from "../component/subNavbar";
 import { FaHome } from "react-icons/fa";
 import { FaStarHalfAlt, FaRegHeart, FaRupeeSign } from "react-icons/fa";
-import { FaStar } from "react-icons/fa6";
+import { FaStar, FaCartPlus } from "react-icons/fa6";
 import { IoMdShare } from "react-icons/io";
 import Food from "../assets/product/food-img-1.jpeg";
 import food2 from "../assets/product/food-img-2.jpeg";
@@ -19,9 +19,9 @@ const productDetails = () => {
     { id: 5, img: Food },
   ];
   return (
-    <>
+    <div className="w-full">
       <SubNavbar />
-      <div class="antialiased">
+      <div class="">
         <div class="py-6">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
             <div class="flex items-center space-x-2 text-gray-400 text-sm">
@@ -93,7 +93,7 @@ const productDetails = () => {
                       {subFood?.map((item, index) => (
                         <div
                           key={index}
-                          className="h-20 md:w-24 flex justify-center items-center"
+                          className="h-18 md:w-24 flex justify-center items-center"
                         >
                           <img
                             src={item.img}
@@ -103,10 +103,10 @@ const productDetails = () => {
                         </div>
                       ))}
                     </div>
-                    <div class=" h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-center align-middle ">
+                    <div class=" h-64 md:h-96 rounded-lg bg-gray-100  flex items-center justify-center align-middle ">
                       <img
                         src={Food}
-                        className="object-contain rounded"
+                        className="object-contain rounded "
                         alt="product"
                       />
                     </div>
@@ -216,39 +216,73 @@ const productDetails = () => {
                 </p>
 
                 <div class="flex py-4 space-x-4">
-                  <div class="relative">
-                    <div class="text-center left-0 pt-2 right-0 absolute block text-xs uppercase text-gray-400 tracking-wide font-semibold">
-                      Qty
-                    </div>
-                    <select class="cursor-pointer appearance-none rounded-xl border border-gray-200 pl-4 pr-8 h-14 flex items-end pb-1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-
-                    <svg
-                      class="w-5 h-5 text-gray-400 absolute right-0 bottom-0 mb-2 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M8 9l4-4 4 4m0 6l-4 4-4-4"
+                  <div
+                    class="py-2 px-3  bg-white border border-gray-200 rounded-lg  items-center flex"
+                    data-hs-input-number=""
+                  >
+                    <div class="flex items-center gap-x-1.5 align-middle justify-center">
+                      <button
+                        type="button"
+                        class="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none  "
+                        data-hs-input-number-decrement=""
+                      >
+                        <svg
+                          class="flex-shrink-0 size-3.5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                        </svg>
+                      </button>
+                      <input
+                        class="p-0 w-6 bg-transparent border-0 text-gray-800 text-center focus:ring-0 "
+                        type="text"
+                        value="0"
+                        data-hs-input-number-input=""
                       />
-                    </svg>
+                      <button
+                        type="button"
+                        class="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none "
+                        data-hs-input-number-increment=""
+                      >
+                        <svg
+                          class="flex-shrink-0 size-3.5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
 
                   <button
                     type="button"
-                    class="h-14 px-6 py-2 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white"
+                    class=" flex  items-center gap-2 h-12 px-6 py-2 font-semibold rounded-xl bg-orange-100 hover:bg-orange-500 text-orange-400 border border-orange-400"
                   >
+                    <FaCartPlus />
                     Add to Cart
+                  </button>
+                  <button
+                    type="button"
+                    class=" flex   items-center gap-2 h-12 px-12 py-2 font-semibold rounded-xl bg-orange-500 hover:bg-orange-500 text-orange-200 border border-orange-400"
+                  >
+                    Quick Buy
                   </button>
                 </div>
               </div>
@@ -256,7 +290,7 @@ const productDetails = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
