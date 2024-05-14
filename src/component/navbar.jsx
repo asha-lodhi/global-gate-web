@@ -3,10 +3,18 @@ import MainLogo from "../assets/main-logo.png";
 import user from "../assets/user-image.jpeg";
 
 const navbar = () => {
+
+  const scrollTo = (id) => {
+    const targetDiv = document.getElementById(id);
+    if (targetDiv) {
+      targetDiv.scrollIntoView({behavior: 'smooth', block: "start"});
+    }
+  };
+
   return (
     <>
-      <nav class="bg-transparent z-10">
-        <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent">
+      <nav class="bg-transparent z-20">
+        <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent z-20">
           <span className="flex items-center space-x-3">
             <img src={MainLogo} className="h-32 w-36" alt="Logo" />
           </span>
@@ -16,7 +24,7 @@ const navbar = () => {
               id="navbar-user"
             >
               <ul class="group header-nav-bar flex align-middle  justify-center items-center flex-col text-xl p-4 md:p-0  border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent">
-                <li className="header-nav-bar">
+                <li className="header-nav-bar" onClick={() => scrollTo("HomeDiv")}>
                   <span
                     className="block py px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation"
                     aria-current="page"
@@ -24,12 +32,12 @@ const navbar = () => {
                     Home
                   </span>
                 </li>
-                <li className="header-nav-bar">
+                <li className="header-nav-bar" onClick={() => scrollTo("AboutDiv")}>
                   <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     About
                   </span>
                 </li>
-                <li className="header-nav-bar">
+                <li className="header-nav-bar" onClick={() => scrollTo("ProductDiv")}>
                   <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     Products
                   </span>

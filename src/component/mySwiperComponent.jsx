@@ -22,10 +22,7 @@ const MySwiperComponent = ({ productImage }) => {
       //   navigation
       //   pagination={{ clickable: true, dynamicBullets: true }}
       scrollbar={{ draggable: true }}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
+      autoplay={false}
       loop={true}
       slidesPerView={1}
       breakpoints={{

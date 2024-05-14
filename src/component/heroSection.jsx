@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 const HomeSection = () => {
   return (
     <>
-      <div className="flex flex-col w-full h-screen relative">
+      <div className="flex flex-col w-full h-screen relative" id='HomeDiv'>
         <img
           src={HeroImage}
           alt="services"

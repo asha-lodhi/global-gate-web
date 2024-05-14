@@ -11,7 +11,7 @@ const AboutSection = () => {
     {title: `“THE” Marketplace`, subTitle: "Seamlessly search, make AI-driven decisions, and engage in buying or selling—all in one platform. Simplify your journey with no need to look elsewhere."}
   ]
   return (
-    <div class="w-screen flex h-screen relative">
+    <div id='AboutDiv' class="w-screen flex h-screen relative">
       <img src={aboutBG} className='absolute h-auto w-screen object-fill z-[0]' />
       <img src={aboutBgTrans} className='absolute h-auto w-screen object-fill z-[1] ' />
       <div className='flex flex-col justify-center items-center z-10 pt-20'>
