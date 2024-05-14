@@ -1,6 +1,9 @@
 import React from "react";
 import SubNavbar from "../component/subNavbar";
 import { FaHome } from "react-icons/fa";
+import { FaStarHalfAlt, FaRegHeart, FaRupeeSign } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
+import { IoMdShare } from "react-icons/io";
 import Food from "../assets/product/food-img-1.jpeg";
 import food2 from "../assets/product/food-img-2.jpeg";
 import food3 from "../assets/product/food-img-3.jpeg";
@@ -85,12 +88,12 @@ const productDetails = () => {
             <div class="flex flex-col md:flex-row -mx-4">
               <div class="md:flex-1 px-4">
                 <div>
-                  <div class="relative flex h-64 md:h-auto rounded-lg bg-gray-100 mb-4 gap-2  items-center justify-center align-middle">
-                    <div class="w-40 h-64 md:h-96 rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
+                  <div class=" relative flex h-64 md:h-auto rounded-lg bg-gray-100 mb-4 gap-2  items-center justify-center align-middle">
+                    <div class="w-48 h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
                       {subFood?.map((item, index) => (
                         <div
                           key={index}
-                          className="h-20  w-24 flex justify-center items-center"
+                          className="h-20 md:w-24 flex justify-center items-center"
                         >
                           <img
                             src={item.img}
@@ -100,7 +103,7 @@ const productDetails = () => {
                         </div>
                       ))}
                     </div>
-                    <div class=" w-full  h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-center align-middle ">
+                    <div class=" h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-center align-middle ">
                       <img
                         src={Food}
                         className="object-contain rounded"
@@ -135,29 +138,77 @@ const productDetails = () => {
                 </div>
               </div>
               <div class="md:flex-1 px-4">
-                <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">
+                <h2 class="mb-2 leading-tight tracking-tight font-semibold text-[#01b5b6] text-sm md:text-sm">
+                  Whey Proteins
+                </h2>
+                <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-lg md:text-[32px]">
                   Lorem ipsum dolor, sit amet consectetur, adipisicing elit.
                 </h2>
-                <p class="text-gray-500 text-sm">
+
+                <div class="flex text-gray-500 items-center">
                   By{" "}
-                  <a href="#" class="text-indigo-600 hover:underline">
+                  <a
+                    href="#"
+                    class="text-[#01b5b6] hover:underline text-base font-bold ml-2"
+                  >
                     ABC Company
                   </a>
-                </p>
+                  <svg
+                    class="h-4 w-4 leading-none text-[#01b5b6] font-semibold mt-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
 
-                <div class="flex items-center space-x-4 my-4">
-                  <div>
-                    <div class="rounded-lg bg-gray-100 flex py-2 px-3">
-                      <span class="text-indigo-400 mr-1 mt-1">$</span>
-                      <span class="font-bold text-indigo-600 text-3xl">25</span>
-                    </div>
+                <div class="flex space-x-2 mt-4 items-center justify-between">
+                  <div class="flex space-x-2 items-center">
+                    {[1, 2, 3, 4]?.map((i) => (
+                      <FaStar className="text-[#01b5b6] text-lg" />
+                    ))}
+
+                    <FaStarHalfAlt className="text-[#01b5b6] text-lg" />
+                    <h4 class="text-black font-bold text-base">4.7</h4>
+                    <h4 class="text-black font-normal text-base">
+                      (40 Reviews)
+                    </h4>
                   </div>
-                  <div class="flex-1">
-                    <p class="text-green-500 text-xl font-semibold">Save 12%</p>
-                    <p class="text-gray-400 text-sm">Inclusive of all Taxes.</p>
+                  <div className="flex pr-20 gap-10">
+                    <div className="flex rounded-full h-8 w-8 bg-gray-200 justify-center items-center">
+                      <FaRegHeart className="text-gray-500 text-lg" />
+                    </div>
+
+                    <div className="flex rounded-full h-8 w-8 bg-gray-200 justify-center items-center">
+                      <IoMdShare className="text-gray-500 text-xl" />
+                    </div>
                   </div>
                 </div>
 
+                <div class="flex items-center space-x-2 my-2">
+                  <span className="text-gray-500">MRP:</span>
+                  <span className="line-through text-gray-500">6399</span>
+                </div>
+                <div className="flex  items-center">
+                  <span className="text-black font-bold text-lg">Price:</span>
+                  <div className=" flex text-black font-bold text-xl">
+                    <FaRupeeSign className="mt-1" />
+                    5,099
+                  </div>
+                  <span className="text-[#04A755] font-semibold mx-4">
+                    20% off
+                  </span>
+                </div>
+                <div className="text-[#04a755] text-xs ">
+                  Inclusive of all taxes
+                </div>
                 <p class="text-gray-500">
                   Lorem ipsum, dolor sit, amet consectetur adipisicing elit.
                   Vitae exercitationem porro saepe ea harum corrupti vero id
