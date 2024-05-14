@@ -1,13 +1,14 @@
 import React from "react";
 import MainLogo from "../assets/main-logo.png";
+import useLogo from "../assets/userLogo.png";
 
 const SubNavbar = () => {
   return (
     <>
-      <nav class="bg-transparent z-10 border-b border-black">
-        <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent">
+      <nav class="bg-transparent z-10 border-b border-black md:pb-0 pb-6">
+        <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent gap-2">
           <span className="flex items-center space-x-3">
-            <img src={MainLogo} className="h-32 w-36" alt="Logo" />
+            <img src={MainLogo} className="md:h-32 md:w-36" alt="Logo" />
           </span>
           <form class="max-w-md mx-auto w-full">
             <div class="relative">
@@ -37,6 +38,9 @@ const SubNavbar = () => {
               />
             </div>
           </form>
+          <span className="md:flex items-center space-x-3 hidden">
+            <img src={useLogo} className="h-20 w-20" alt="Logo" />
+          </span>
         </div>
       </nav>
     </>
