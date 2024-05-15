@@ -40,7 +40,7 @@ const ProductAnalysis = () => {
     <>
       <div className="max-w-screen-xl mx-auto  h-auto w-full md:flex ">
         <div className="max-w-screen-xl mx-auto py-8 pt-4 h-auto w-full">
-          <div className="flex w-full justify-center items-center mb-4   sticky top-[10px] bg-white">
+          <div className="flex w-full justify-center items-center mb-4   sticky top-0 bg-white">
             <ul
               className="md:flex flex-wrap -mb-px text-sm font-medium text-center  justify-between"
               id="default-tab"
@@ -53,9 +53,9 @@ const ProductAnalysis = () => {
                     setOpenTab("profile");
                     scrollToTarget("profile");
                   }}
-                  className={` px-10 text-black inline-block p-4 border-b-2 rounded-t-lg text-[18px] font-poppins ${
+                  className={` px-10 text-black inline-block p-4 border-b-4 rounded-t-lg text-[18px] font-poppins ${
                     openTab === "profile"
-                      ? "border-[#171717] font-semibold"
+                      ? "border-[#00b6b7] font-semibold"
                       : ""
                   }`}
                   id="profile-tab"
@@ -74,9 +74,9 @@ const ProductAnalysis = () => {
                     setOpenTab("professionalMembership");
                     scrollToTarget("professionalMembership");
                   }}
-                  className={` px-10  text-black inline-block p-4 border-b-2 rounded-t-lg text-[18px] font-poppins ${
+                  className={` px-10  text-black inline-block p-4 border-b-4 rounded-t-lg text-[18px] font-poppins ${
                     openTab === "professionalMembership"
-                      ? "border-[#171717] font-semibold"
+                      ? "border-[#00b6b7] font-semibold"
                       : ""
                   }`}
                   id="dashboard-tab"
@@ -95,8 +95,8 @@ const ProductAnalysis = () => {
                     setOpenTab("awards");
                     scrollToTarget("awards");
                   }}
-                  className={`  px-10 text-black inline-block p-4 border-b-2 rounded-t-lg text-[18px] font-poppins ${
-                    openTab === "awards" ? "border-[#171717] font-semibold" : ""
+                  className={`  px-10 text-black inline-block p-4 border-b-4 rounded-t-lg text-[18px] font-poppins ${
+                    openTab === "awards" ? "border-[#00b6b7] font-semibold" : ""
                   }`}
                   id="settings-tab"
                   data-tabs-target="#settings"
@@ -114,8 +114,8 @@ const ProductAnalysis = () => {
                     setOpenTab("awards");
                     scrollToTarget("awards");
                   }}
-                  className={`  px-10 text-black inline-block p-4 border-b-2 rounded-t-lg text-[18px] font-poppins ${
-                    openTab === "awards" ? "border-[#171717] font-semibold" : ""
+                  className={`  px-10 text-black inline-block p-4 border-b-4 rounded-t-lg text-[18px] font-poppins ${
+                    openTab === "awards" ? "border-[#00b6b7] font-semibold" : ""
                   }`}
                   id="settings-tab"
                   data-tabs-target="#settings"

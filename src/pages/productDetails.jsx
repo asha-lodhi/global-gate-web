@@ -216,9 +216,9 @@ const productDetails = () => {
                   laudantium enim, libero blanditiis expedita cupiditate a est.
                 </p>
 
-                <div class="flex py-4 space-x-4">
+                <div class="flex flex-col py-4 space-x-4 gap-2 md:flex-row">
                   <div
-                    class="py-2 px-3  bg-white border border-gray-200 rounded-lg  items-center flex"
+                    class="py-2 px-3   bg-white border border-gray-200 rounded-lg  items-center flex justify-center align-middle"
                     data-hs-input-number=""
                   >
                     <div class="flex items-center gap-x-1.5 align-middle justify-center">
