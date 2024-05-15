@@ -9,6 +9,7 @@ import food2 from "../assets/product/food-img-2.jpeg";
 import food3 from "../assets/product/food-img-3.jpeg";
 import food4 from "../assets/product/food-img-4.jpeg";
 import food5 from "../assets/product/food-img-5.jpeg";
+import ProductAnalysis from "../component/productAnalysis";
 
 const productDetails = () => {
   const subFood = [
@@ -290,6 +291,7 @@ const productDetails = () => {
           </div>
         </div>
       </div>
+      <ProductAnalysis />
     </div>
   );
 };
