@@ -9,6 +9,14 @@ const ChatBox = () => {
     <div>
       {showChat && (
         <div class="mx-2 z-40 fixed flex flex-col flex-grow w-96 bg-white shadow-xl rounded-lg overflow-hidden bottom-28 right-4">
+          <div className="flex h-16 w-full bg-blue-700 justify-start items-center px-4">
+            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
+            <div className="flex flex-col mx-2">
+              <span className="text-base font-bold text-white">Admin</span>
+              <div className="text-[10px] text-white">active</div>
+            </div>
+          </div>
+
           <div class="flex flex-col flex-grow h-[32rem] p-4 overflow-auto ">
             <div class="flex w-full mt-2 space-x-3 max-w-xs">
               <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>

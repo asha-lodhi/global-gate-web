@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import FoodChartImg from "../assets/product/food-chart-img.jpeg";
 import Graph from "./graph";
+import DemoApp from "../pages/DemoApp";
 
 const ProductAnalysis = () => {
   const [openTab, setOpenTab] = useState("profile");
@@ -281,7 +282,8 @@ const ProductAnalysis = () => {
               </div>
             </div> */}
           </div>
-          <Graph />
+          {/* <Graph /> */}
+          <DemoApp />
         </div>
       </div>
     </>

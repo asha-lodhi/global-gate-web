@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SubNavbar from "../component/subNavbar";
 import { FaHome } from "react-icons/fa";
 import { FaStarHalfAlt, FaRegHeart, FaRupeeSign } from "react-icons/fa";
@@ -10,8 +10,9 @@ import food3 from "../assets/product/food-img-3.jpeg";
 import food4 from "../assets/product/food-img-4.jpeg";
 import food5 from "../assets/product/food-img-5.jpeg";
 import ProductAnalysis from "../component/productAnalysis";
+import ChatBox from "../component/chatBox";
 
-const productDetails = () => {
+const ProductDetails = () => {
   const subFood = [
     { id: 1, img: food2 },
     { id: 2, img: food3 },
@@ -19,9 +20,15 @@ const productDetails = () => {
     { id: 4, img: food5 },
     { id: 5, img: Food },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full">
       <SubNavbar />
+      <ChatBox />
+
       <div class="">
         <div class="py-6">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -296,4 +303,4 @@ const productDetails = () => {
   );
 };
 
-export default productDetails;
+export default ProductDetails;
