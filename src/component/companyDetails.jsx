@@ -3,8 +3,11 @@ import Navbar from "./navbar";
 import HeroImage from "../assets/hero-section-image.jpeg";
 import Dals from "../assets/product/dals.jpeg";
 import ProductCard from "./productCard";
+import { RxCross2 } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 const CompanyDetails = (props) => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col w-full relative" id="HomeDiv">
       <img
@@ -14,7 +17,13 @@ const CompanyDetails = (props) => {
       />
       <Navbar />
       <div className="flex w-full  justify-center items-center align-middle z-10 mb-10 ">
-        <div className="overflow-y-scroll flex flex-col border-2 border-gray-200 rounded shadow-md  w-4/5 my-4 bg-white  justify-center items-center">
+        <div className=" relative  flex flex-col border-2 border-gray-200 rounded shadow-md  w-4/5 my-4 bg-white  justify-center items-center">
+          <div className=" absolute -top-4 -right-6 mx-2 z-40 w-16 h-16 bg-[#00b5b6]  flex flex-col justify-center items-center flex-grow shadow-xl rounded-full overflow-hidden ">
+            <RxCross2
+              className="text-blue text-3xl"
+              onClick={() => navigate(-1)}
+            />
+          </div>
           <div class="min-h-auto w-full flex flex-col justify-center items-center py-6 ">
             <div class=" sm:w-full sm:max-w-xl">
               <h2 class="mt-2 text-center text-3xl font-extrabold text-gray-900">

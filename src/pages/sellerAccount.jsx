@@ -2,8 +2,11 @@ import React from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
 import Navbar from "../component/navbar";
 import HeroImage from "../assets/hero-section-image.jpeg";
+import { RxCross2 } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 const SellerAccount = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col w-full min-h-screen relative" id="HomeDiv">
       <img
@@ -13,7 +16,13 @@ const SellerAccount = () => {
       />
       <Navbar />
       <div className="max-h-screen flex w-full  justify-center items-center align-middle z-10 mb-10 ">
-        <div className="   flex border-2 border-gray-200 rounded shadow-md  w-1/2 my-4 bg-white ">
+        <div className=" relative flex border-2 border-gray-200 rounded shadow-md  w-1/2 my-4 bg-white ">
+          <div className=" absolute -top-4 -right-6 mx-2 z-40 w-16 h-16 bg-[#00b5b6]  flex flex-col justify-center items-center flex-grow shadow-xl rounded-full overflow-hidden ">
+            <RxCross2
+              className="text-blue text-3xl"
+              onClick={() => navigate("/")}
+            />
+          </div>
           <div class="min-h-auto w-full flex flex-col justify-center items-center py-6 ">
             <div class=" sm:w-full sm:max-w-md">
               <h2 class="mt-2 text-center text-3xl font-extrabold text-gray-900">

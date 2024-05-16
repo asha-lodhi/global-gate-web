@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "../component/navbar";
 import HeroImage from "../assets/hero-section-image.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="flex flex-col w-full min-h-screen relative" id="HomeDiv">
@@ -12,8 +14,8 @@ const AddProduct = () => {
           className="w-full min-h-screen object-cover opacity-90  z-[0] fixed"
         />
         <Navbar />
-        <section class=" min-h-screen z-10">
-          <div class="py-4 px-8 mx-auto max-w-2xl lg:py-8 border my-10 bg-white rounded">
+        <section class="min-h-screen z-10">
+          <div class="py-4 px-8 mx-auto max-w-2xl lg:py-8 border my-4 bg-white rounded">
             <h2 class="mb-4 text-xl font-bold text-gray-900 text-center">
               Add a new product
             </h2>
@@ -170,6 +172,7 @@ const AddProduct = () => {
                 <button
                   type="submit"
                   class=" w-full inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center justify-center text-black bg-blue-200 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+                  onClick={() => navigate("/")}
                 >
                   Cancel
                 </button>
