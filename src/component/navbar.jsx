@@ -86,6 +86,12 @@ const Navbar = () => {
                     >
                       Become a Seller
                     </div>
+                    <div
+                      className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md"
+                      onClick={() => navigate("/add-product")}
+                    >
+                      Add Product
+                    </div>
                     <div className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md">
                       Settings
                     </div>
