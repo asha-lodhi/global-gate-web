@@ -34,3 +34,6 @@ code {
   transform: scaleX(1);
   cursor: pointer;
  }
+ #middle-section {
+  height: calc(100vh - 143px) !important;
+}

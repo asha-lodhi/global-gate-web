@@ -11,10 +11,10 @@ import food4 from "../assets/product/food-img-4.jpeg";
 import food5 from "../assets/product/food-img-5.jpeg";
 import ProductAnalysis from "../component/productAnalysis";
 import ChatBox from "../component/chatBox";
-import CompanyDetailsModal from "../component/companyDetailsModal";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
-  const [showCompanyDetailModal, setShowCompanyDetailModal] = useState(false);
+  const navigate = useNavigate();
   const subFood = [
     { id: 1, img: food2 },
     { id: 2, img: food3 },
@@ -27,20 +27,10 @@ const ProductDetails = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const dismissModal = () => {
-    setShowCompanyDetailModal(false);
-  };
   return (
     <div className="w-full">
       <SubNavbar />
       <ChatBox />
-      {showCompanyDetailModal && (
-        <CompanyDetailsModal
-          onPress={() => {
-            dismissModal();
-          }}
-        />
-      )}
 
       <div class="">
         <div class="py-6">
@@ -170,7 +160,7 @@ const ProductDetails = () => {
                   By{" "}
                   <span
                     class="text-[#01b5b6] hover:underline text-base font-bold ml-2 cursor-pointer"
-                    onClick={() => setShowCompanyDetailModal(true)}
+                    onClick={() => navigate("/company-details")}
                   >
                     ABC Company
                   </span>

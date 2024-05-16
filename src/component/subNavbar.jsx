@@ -1,14 +1,24 @@
 import React from "react";
 import MainLogo from "../assets/main-logo.png";
 import useLogo from "../assets/userLogo.png";
+import { useNavigate } from "react-router-dom";
 
 const SubNavbar = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <nav class="bg-transparent z-10 border-b border-black md:pb-0 pb-6">
         <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent gap-2">
           <span className="flex items-center space-x-3">
-            <img src={MainLogo} className="md:h-32 md:w-36" alt="Logo" />
+            <img
+              src={MainLogo}
+              className="md:h-32 md:w-36"
+              alt="Logo"
+              onClick={() => {
+                navigate("/");
+              }}
+            />
           </span>
           <form class="max-w-md mx-auto w-full">
             <div class="relative">
