@@ -57,7 +57,7 @@ const ProductCard = ({ productImage }) => {
               </span>
             </div>
           </div>
-          <div className="my-2 font-sansation">Basmati rice</div>
+          <div className="my-2 font-sansation text-left">Basmati rice</div>
           <div class="flex items-center  gap-4 ">
             <div className="flex">
               <svg
