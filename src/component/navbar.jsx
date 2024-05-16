@@ -1,13 +1,14 @@
 import React from "react";
 import MainLogo from "../assets/main-logo.png";
 import user from "../assets/user-image.jpeg";
+import { useNavigate } from "react-router-dom";
 
-const navbar = () => {
-
+const Navbar = () => {
+  const navigate = useNavigate();
   const scrollTo = (id) => {
     const targetDiv = document.getElementById(id);
     if (targetDiv) {
-      targetDiv.scrollIntoView({behavior: 'smooth', block: "start"});
+      targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -24,7 +25,10 @@ const navbar = () => {
               id="navbar-user"
             >
               <ul class="group header-nav-bar flex align-middle  justify-center items-center flex-col text-xl p-4 md:p-0  border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent">
-                <li className="header-nav-bar" onClick={() => scrollTo("HomeDiv")}>
+                <li
+                  className="header-nav-bar"
+                  onClick={() => scrollTo("HomeDiv")}
+                >
                   <span
                     className="block py px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation"
                     aria-current="page"
@@ -32,12 +36,18 @@ const navbar = () => {
                     Home
                   </span>
                 </li>
-                <li className="header-nav-bar" onClick={() => scrollTo("AboutDiv")}>
+                <li
+                  className="header-nav-bar"
+                  onClick={() => scrollTo("AboutDiv")}
+                >
                   <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     About
                   </span>
                 </li>
-                <li className="header-nav-bar" onClick={() => scrollTo("ProductDiv")}>
+                <li
+                  className="header-nav-bar"
+                  onClick={() => scrollTo("ProductDiv")}
+                >
                   <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     Products
                   </span>
@@ -52,56 +62,35 @@ const navbar = () => {
                     Blogs
                   </span>
                 </li>
-                <div
-                  class="z-50 hidden my-4 text-base list-none bg-transparent divide-y divide-gray-100 rounded-lg shadow dark:bg-transparent dark:divide-gray-600"
-                  id="user-dropdown"
-                >
-                  <div class="px-4 py-3">
-                    <span class="block text-sm text-gray-900 dark:text-white">
-                      Bonnie Green
-                    </span>
-                    <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                      name@flowbite.com
-                    </span>
+
+                <div className="relative w-full group">
+                  <button className="w-14 h-14 md:text-sm text-site rounded-full bg-white border border-dimmed focus:border-brand focus:outline-none focus:ring-0 peer flex items-center justify-between  font-semibold">
+                    <img
+                      className="w-full h-full rounded-full object-cover"
+                      src={user}
+                      alt="user photo"
+                    />
+                  </button>
+                  <div className="absolute z-[99] top-[100%] left-[50%] translate-x-[-50%] rounded-md overflow-hidden shadow-lg min-w-[150px] w-max peer-focus:visible peer-focus:opacity-100 opacity-0 invisible duration-200 p-1 bg-white dark:bg-white  border border-dimmed text-xs md:text-sm">
+                    <div className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md">
+                      <span class="block text-sm text-black dark:text-black">
+                        Bonnie Green
+                      </span>
+                      <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">
+                        name@flowbite.com
+                      </span>
+                    </div>
+                    <div
+                      className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md"
+                      onClick={() => navigate("/become-seller")}
+                    >
+                      Become a Seller
+                    </div>
+                    <div className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md">
+                      Settings
+                    </div>
                   </div>
-                  <ul class="py-2 " aria-labelledby="user-menu-button">
-                    <li>
-                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-transparent dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                        Dashboard
-                      </span>
-                    </li>
-                    <li>
-                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-transparent dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                        Settings
-                      </span>
-                    </li>
-                    <li>
-                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                        Earnings
-                      </span>
-                    </li>
-                    <li>
-                      <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                        Sign out
-                      </span>
-                    </li>
-                  </ul>
                 </div>
-                <button
-                  type="button"
-                  class="flex text-sm bg-transparent rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                  id="user-menu-button"
-                  aria-expanded="false"
-                  data-dropdown-toggle="user-dropdown"
-                  data-dropdown-placement="bottom"
-                >
-                  <span class="sr-only">Open user menu</span>
-                  <img
-                    className="w-14 h-14 rounded-full object-cover"
-                    src={user}
-                    alt="user photo"
-                  />
-                </button>
               </ul>
             </div>
 
@@ -136,4 +125,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

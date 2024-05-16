@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { LuSendHorizonal } from "react-icons/lu";
 import { MdOutlineChat } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 
 const ChatBox = () => {
   const [showChat, setShowChat] = React.useState(false);
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+    const targetDiv = document.getElementById("chatboxId");
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+  };
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      scrollToBottom();
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
       {showChat && (
@@ -17,7 +37,11 @@ const ChatBox = () => {
             </div>
           </div>
 
-          <div class="flex flex-col flex-grow h-[32rem] p-4 overflow-auto ">
+          <div
+            class="flex flex-col flex-grow h-[32rem] p-4 overflow-auto  "
+            ref={messagesEndRef}
+            id="chatboxId"
+          >
             <div class="flex w-full mt-2 space-x-3 max-w-xs">
               <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
               <div>
@@ -126,7 +150,7 @@ const ChatBox = () => {
                 </span>
               </div>
             </div>
-            <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+            <div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end ">
               <div>
                 <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
                   <p class="text-sm">Lorem ipsum dolor sit.</p>
