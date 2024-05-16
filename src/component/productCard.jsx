@@ -1,13 +1,13 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({productImage}) => {
+const ProductCard = ({ productImage }) => {
   const navigate = useNavigate();
   return (
     <>
       <div
         class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 "
-        onClick={() => navigate(`/product-details/${ 123456 }`)}
+        onClick={() => navigate(`/product-details/${123456}`)}
       >
         <img
           class="w-full my-10 px-2 h-auto object-contain"
@@ -31,18 +31,30 @@ const ProductCard = ({productImage}) => {
                   <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                 </svg>
               </div>
-              <span class="text-sm font-light text-black mx-2 font-sansation">73 reviews</span>
+              <span class="text-sm font-light text-black mx-2 font-sansation">
+                73 reviews
+              </span>
             </div>
             <div class="flex items-center  px-2 gap-1 h-[20px] rounded">
-              <svg
-                class="w-3 h-3 text-black"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 22 20"
-              >
-                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-              </svg>
+              <span className="relative top-0 -right-2">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="1"
+                    y="1"
+                    width="28"
+                    height="28"
+                    stroke="#28942C"
+                    stroke-width="2"
+                  />
+                  <circle cx="15" cy="14.9999" r="6.66667" fill="#28942C" />
+                </svg>
+              </span>
             </div>
           </div>
           <div className="my-2 font-sansation">Basmati rice</div>
@@ -60,7 +72,9 @@ const ProductCard = ({productImage}) => {
               </svg>
               <span className="font-bold font-sansation">2,649</span>
             </div>
-            <span className="text-gray-400 line-through font-sansation">3,499</span>
+            <span className="text-gray-400 line-through font-sansation">
+              3,499
+            </span>
             <span className="text-green-600 text-sm font-semibold font-sansation">
               24% off
             </span>

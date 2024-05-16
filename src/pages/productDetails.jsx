@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SubNavbar from "../component/subNavbar";
 import { FaHome } from "react-icons/fa";
 import { FaStarHalfAlt, FaRegHeart, FaRupeeSign } from "react-icons/fa";
@@ -11,8 +11,10 @@ import food4 from "../assets/product/food-img-4.jpeg";
 import food5 from "../assets/product/food-img-5.jpeg";
 import ProductAnalysis from "../component/productAnalysis";
 import ChatBox from "../component/chatBox";
+import CompanyDetailsModal from "../component/companyDetailsModal";
 
 const ProductDetails = () => {
+  const [showCompanyDetailModal, setShowCompanyDetailModal] = useState(false);
   const subFood = [
     { id: 1, img: food2 },
     { id: 2, img: food3 },
@@ -24,10 +26,21 @@ const ProductDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const dismissModal = () => {
+    setShowCompanyDetailModal(false);
+  };
   return (
     <div className="w-full">
       <SubNavbar />
       <ChatBox />
+      {showCompanyDetailModal && (
+        <CompanyDetailsModal
+          onPress={() => {
+            dismissModal();
+          }}
+        />
+      )}
 
       <div class="">
         <div class="py-6">
@@ -155,12 +168,12 @@ const ProductDetails = () => {
 
                 <div class="flex text-gray-500 items-center">
                   By{" "}
-                  <a
-                    href="#"
-                    class="text-[#01b5b6] hover:underline text-base font-bold ml-2"
+                  <span
+                    class="text-[#01b5b6] hover:underline text-base font-bold ml-2 cursor-pointer"
+                    onClick={() => setShowCompanyDetailModal(true)}
                   >
                     ABC Company
-                  </a>
+                  </span>
                   <svg
                     class="h-4 w-4 leading-none text-[#01b5b6] font-semibold mt-1"
                     xmlns="http://www.w3.org/2000/svg"

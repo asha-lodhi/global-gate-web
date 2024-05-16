@@ -16,8 +16,15 @@ const Navbar = () => {
     <>
       <nav class="bg-transparent z-20">
         <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent z-20">
-          <span className="flex items-center space-x-3">
-            <img src={MainLogo} className="h-32 w-36" alt="Logo" />
+          <span className="flex items-center space-x-3 ">
+            <img
+              src={MainLogo}
+              className="h-32 w-36"
+              alt="Logo"
+              onClick={() => {
+                navigate("/");
+              }}
+            />
           </span>
           <div class="flex items-center align-middle md:order-2 space-x-3 md:space-x-0">
             <div
