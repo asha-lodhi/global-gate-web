@@ -137,7 +137,7 @@ const ChatBox = () => {
               onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
             />
             <LuSendHorizonal
-              className=" absolute text-3xl text-center top-3  right-8 text-blue-300 bg-white"
+              className=" absolute text-3xl text-center top-3  right-8 text-blue-500 bg-white z-20 cursor-pointer"
               onClick={handleSendMessage}
             />
           </div>
