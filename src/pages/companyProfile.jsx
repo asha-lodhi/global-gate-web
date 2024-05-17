@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import SubNavbar from "../component/subNavbar";
 import { FaHome } from "react-icons/fa";
 import { FaStarHalfAlt, FaRegHeart, FaRupeeSign } from "react-icons/fa";
@@ -10,14 +10,19 @@ import food3 from "../assets/product/food-img-3.jpeg";
 import food4 from "../assets/product/food-img-4.jpeg";
 import food5 from "../assets/product/food-img-5.jpeg";
 import ProductAnalysis from "../component/productAnalysis";
-import ChatBox from "../component/chatBox";
 import { useNavigate } from "react-router-dom";
 import SuggestedItems from "../component/suggestedItms";
 import ProductCard from "../component/productCard";
 import Dals from "../assets/product/dals.jpeg";
+import { useParams } from "react-router-dom";
+import { RecommendedData } from "../constants";
 
 const CompanyProfile = () => {
   const navigate = useNavigate();
+  let { companyID } = useParams();
+  const [companyDetail, setCompanyDetail] = React.useState({});
+  const [companyList, setCompanyList] = React.useState([]);
+
   const subFood = [
     { id: 1, img: food2 },
     { id: 2, img: food3 },
@@ -28,12 +33,23 @@ const CompanyProfile = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    const companyFilter = RecommendedData?.filter(
+      (v) => Number(v?.sellerId) === Number(companyID)
+    );
+    setCompanyDetail(companyFilter?.[0]);
+  }, [companyID]);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+    const companies = RecommendedData?.filter(
+      (v) => Number(v?.sellerId) !== Number(companyID)
+    );
+    setCompanyList(companies);
+  }, [companyID]);
 
   return (
     <div className="w-full">
       <SubNavbar />
-      {/* <ChatBox /> */}
 
       <div class="">
         <div class="py-6">
@@ -101,9 +117,9 @@ const CompanyProfile = () => {
           <div class="max-w-7xl max-lg:w-full mx-auto px-4 sm:px-6 lg:px-8 mt-6 ">
             <div class="flex flex-col md:flex-row -mx-4 ">
               <div class="w-[1000px] px-4">
-                <div className="h-[400px] bg-gray-100  rounded-lg px-2">
-                  <div class="relative flex h-full md:h-full rounded-lg bg-gray-100 mb-4 gap-2  items-center justify-center align-middle">
-                    <div class="w-48 h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
+                <div className="h-[400px] bg-gray-100  rounded-lg">
+                  <div class="relative flex h-full md:h-full rounded-lg bg-gray-100 mb-4 justify-center">
+                    <div class="w-[20%] h-64 md:h-auto rounded-lg bg-gray-100 flex items-center justify-around flex-col space-y-1">
                       {subFood?.map((item, index) => (
                         <div
                           key={index}
@@ -117,10 +133,10 @@ const CompanyProfile = () => {
                         </div>
                       ))}
                     </div>
-                    <div class="h-64 md:h-96 rounded-lg bg-gray-100  flex items-center justify-center align-middle ">
+                    <div class="w-[80%] h-[100%] rounded-lg bg-gray-100  flex items-center justify-center overflow-hidden">
                       <img
-                        src={Food}
-                        className="object-contain rounded "
+                        src={companyDetail?.img}
+                        className="w-full object-fill h-[100%]"
                         alt="product"
                       />
                     </div>
@@ -153,7 +169,7 @@ const CompanyProfile = () => {
               </div>
 
               <div class="w-[550px]">
-                <SuggestedItems />
+                <SuggestedItems RecommendedList={companyList} />
               </div>
             </div>
           </div>
@@ -173,7 +189,7 @@ const CompanyProfile = () => {
                 class="text-[#01b5b6] hover:underline text-base font-bold ml-2 cursor-pointer"
                 onClick={() => navigate("/company-details")}
               >
-                ABC Company
+                {companyDetail?.sellerName}
               </span>
               <svg
                 class="h-4 w-4 leading-none text-[#01b5b6] font-semibold mt-1"
@@ -306,7 +322,7 @@ const CompanyProfile = () => {
           </div>
         </div>
         <ProductAnalysis />
-        <div class=" pb-12 px-4 mx-auto text-center  lg:px-6">
+        <div class="pb-12 px-4 mx-auto text-center lg:px-6 mt-6">
           <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
               Our Products

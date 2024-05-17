@@ -76,7 +76,12 @@ const Navbar = () => {
                     </div>
                   </div>
                 </li>
-                <li className="header-nav-bar">
+                <li
+                  className="header-nav-bar"
+                  onClick={() => {
+                    navigate("/trends");
+                  }}
+                >
                   <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     Trends
                   </span>
@@ -115,12 +120,6 @@ const Navbar = () => {
                       onClick={() => setIsBuyer(true)}
                     >
                       Buyer
-                    </div>
-                    <div
-                      className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md"
-                      onClick={() => navigate("/add-product")}
-                    >
-                      Add Product
                     </div>
                   </div>
                 </div>

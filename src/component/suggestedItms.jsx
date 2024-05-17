@@ -1,38 +1,34 @@
 import React from "react";
-import Food from "../assets/product/food-img-1.jpeg";
-import food2 from "../assets/product/food-img-2.jpeg";
-import food3 from "../assets/product/food-img-3.jpeg";
-import food4 from "../assets/product/food-img-4.jpeg";
-import food5 from "../assets/product/food-img-5.jpeg";
+import { useNavigate } from "react-router-dom";
 
-// const suggestedItems = ["Item 1", "Item 2", "Item 3", "Item 4"];
+const SuggestedItems = (RecommendedList) => {
+  const navigate = useNavigate();
 
-const SuggestedItems = () => {
-  const subFood = [
-    { id: 1, img: food2 },
-    { id: 2, img: food3 },
-    { id: 3, img: food4 },
-    { id: 4, img: food5 },
-    { id: 5, img: Food },
-  ];
+  const redirectToProduct = (id) => {
+    navigate(`/company-profile/${id}`);
+  };
+
   return (
     <div className="flex justify-center w-full  h-[400px]  items-center rounded-lg border ml-10 overflow-auto">
       <div className="w-full h-full p-4 bg-gray-100 rounded-lg shadow-lg ">
         <h2 className="text-2xl font-semibold mb-4 ">Recommended sellers</h2>
         <ul className="space-y-2 overflow-scroll ">
-          {subFood.map((item, index) => (
+          {RecommendedList?.map((item, index) => (
             <div
-              key={index}
-              className="p-2 bg-white rounded-md shadow-sm hover:bg-gray-50 flex"
+              key={item.sellerId}
+              onClick={() => {
+                redirectToProduct(item.sellerId);
+              }}
+              className="p-2 bg-white rounded-md shadow-sm hover:bg-gray-50 flex cursor-pointer"
             >
               <div className="">
                 <img src={item.img} className="h-20 w-20" alt="Recommended" />
               </div>
 
               <div className="w-full flex flex-col items-start space-y-1 mx-4">
-                <span className="text-lg font-semibold text-[#00b5b6]">
+                <span className="text-lg font-semibold text-[#00b5b6] cursor-pointer">
                   {" "}
-                  ABC Company
+                  {item.sellerName}
                 </span>
                 <div class="flex items-center  gap-4  ">
                   <div className="flex">

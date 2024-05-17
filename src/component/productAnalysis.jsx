@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import FoodChartImg from "../assets/product/food-chart-img.jpeg";
-import Graph from "./graph";
-import DemoApp from "../pages/DemoApp";
 
 const ProductAnalysis = () => {
   const [openTab, setOpenTab] = useState("profile");
@@ -117,7 +115,9 @@ const ProductAnalysis = () => {
                     scrollToTarget("awards-1");
                   }}
                   className={`  px-10 text-black inline-block p-4 border-b-4 rounded-t-lg text-[18px] font-poppins ${
-                    openTab === "awards-1" ? "border-[#00b6b7] font-semibold" : ""
+                    openTab === "awards-1"
+                      ? "border-[#00b6b7] font-semibold"
+                      : ""
                   }`}
                   id="settings-tab"
                   data-tabs-target="#settings"
@@ -282,8 +282,16 @@ const ProductAnalysis = () => {
               </div>
             </div> */}
           </div>
-          {/* <Graph /> */}
-          <DemoApp />
+          <div className="flex justify-center items-center">
+            <iframe
+              title="Yearly_exports"
+              width="1000"
+              height="600"
+              src="https://app.powerbi.com/view?r=eyJrIjoiYjRjMDhiMjYtMzhmNy00MTZiLWJiMmYtNzcxOTYxZGE5NmUyIiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D"
+              frameborder="0"
+              allowFullScreen="true"
+            ></iframe>
+          </div>
         </div>
       </div>
     </>

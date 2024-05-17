@@ -56,8 +56,8 @@ const ChatBox = () => {
   const phonePattern = /\b\d{5,}\b/;
 
   const redirectToProduct = (id) => {
-    console.log("PRODUCT ID:", id);
     navigate(`/company-profile/${id}`);
+    setShowChat(false)
   };
 
   return (

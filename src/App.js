@@ -7,6 +7,8 @@ import AddProduct from "./pages/addProduct";
 import CompanyDetails from "./component/companyDetails";
 import CompanyProfile from "./pages/companyProfile";
 import Layout from "./component/layout";
+import CompanyAnalytic from "./component/companyAnalytic";
+import Trends from "./component/trends";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
             element={<CompanyProfile />}
           />
           <Route path="/" element={<DashBoard />} />
+          <Route path="/company-analytic" element={<CompanyAnalytic />} />
+          <Route path="/trends" element={<Trends />} />
         </Route>
       </Routes>
     </BrowserRouter>

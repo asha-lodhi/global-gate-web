@@ -5,6 +5,7 @@ import Dals from "../assets/product/dals.jpeg";
 import ProductCard from "./productCard";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
+import { MdVerified } from "react-icons/md";
 
 const CompanyDetails = (props) => {
   const navigate = useNavigate();
@@ -39,7 +40,10 @@ const CompanyDetails = (props) => {
                 <span class="tracking-wide text-xl font-semibold">
                   All About the company
                 </span>
-                <button className="bg-blue-400 rounded-xl px-4 py-1">
+                <button
+                  className="bg-blue-400 rounded-xl px-4 py-1"
+                  onClick={() => navigate("/company-analytic")}
+                >
                   Company Analytics
                 </button>
               </div>
@@ -47,7 +51,10 @@ const CompanyDetails = (props) => {
                 <div class="grid md:grid-cols-2 text-sm">
                   <div class="grid grid-cols-2">
                     <div class="px-4 py-2 font-semibold">Company Name</div>
-                    <div class="px-4 py-2">ABC</div>
+                    <div class="px-4 py-2 flex ">
+                      ABC
+                      <MdVerified className="text-blue-600 text-[20px] mx-2" />
+                    </div>
                   </div>
                   <div class="grid grid-cols-2">
                     <div class="px-4 py-2 font-semibold">Owner Name</div>

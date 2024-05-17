@@ -65,8 +65,9 @@ const SellerAccount = () => {
                       >
                         Last Name
                       </label>
+
                       <input
-                        class="w-full px-3 py-2 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        class="w-full px-3 py-2 text-sm leading-tight  text-black border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                         id="lastName"
                         type="text"
                         placeholder="Last Name"
@@ -204,6 +205,7 @@ const SellerAccount = () => {
                     <button
                       type="submit"
                       class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      onClick={() => navigate("/add-product")}
                     >
                       Sign Up
                     </button>
