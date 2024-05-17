@@ -57,7 +57,7 @@ const ChatBox = () => {
 
   const redirectToProduct = (id) => {
     console.log("PRODUCT ID:", id);
-    navigate(`/product-details/${id}`);
+    navigate(`/company-profile/${id}`);
   };
 
   return (

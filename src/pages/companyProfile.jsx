@@ -291,7 +291,7 @@ const CompanyProfile = () => {
 
               <button
                 type="button"
-                class=" flex  items-center gap-2 h-12 px-6 py-2 font-semibold rounded-xl bg-orange-100 hover:bg-orange-500 text-orange-400 border border-orange-400"
+                class=" flex  items-center gap-2 h-12 px-6 py-2 font-semibold rounded-xl bg-orange-100 hover:bg-orange-500 text-orange-400 border hover:text-white border-orange-400"
               >
                 <FaCartPlus />
                 Add to Cart
@@ -305,22 +305,22 @@ const CompanyProfile = () => {
             </div>
           </div>
         </div>
-      </div>
-      <ProductAnalysis />
-      <div class=" px-4 mx-auto text-center  lg:px-6">
-        <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
-            Our Products
-          </h2>
-          <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-            Explore the whole collection of open-source web components and
-            elements built with the utility classes from Tailwind
-          </p>
-        </div>
-        <div className="flex flex-wrap justify-center  gap-2 lg:gap-4 -top-20">
-          {[1, 2, 3, 4].map((i) => (
-            <ProductCard productImage={Dals} />
-          ))}
+        <ProductAnalysis />
+        <div class=" pb-12 px-4 mx-auto text-center  lg:px-6">
+          <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
+              Our Products
+            </h2>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Explore the whole collection of open-source web components and
+              elements built with the utility classes from Tailwind
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center  gap-2 lg:gap-4 -top-20">
+            {[1, 2, 3, 4].map((i) => (
+              <ProductCard productImage={Dals} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
