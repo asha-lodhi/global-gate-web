@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "canvasjs": "^1.8.3",
+    "http-proxy-middleware": "^3.0.0",
     "linkify-it": "^5.0.0",
     "powerbi-client": "^2.23.1",
     "powerbi-client-react": "^1.4.0",
