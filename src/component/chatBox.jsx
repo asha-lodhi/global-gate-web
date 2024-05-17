@@ -11,7 +11,7 @@ const ChatBox = () => {
   const [showChat, setShowChat] = useState(false);
   const [messages, setMessages] = useState([
     {
-      text: "Hi,  I'm here to help you 77676767676 No..",
+      text: "Hi,  I'm here to help you!",
       sender: "bot",
       timestamp: "2 min ago",
     },
