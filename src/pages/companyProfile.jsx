@@ -44,9 +44,12 @@ const CompanyProfile = () => {
 
   const fetchSuggestedList = async () => {
     try {
-      const res = await axios.post("http://127.0.0.1:5001/query", {
-        application_no: companyID,
-      });
+      const res = await axios.post(
+        "http://127.0.0.1:5001/recommended_application_no",
+        {
+          application_no: companyID,
+        }
+      );
       const { application_ids } = res?.data;
       if (application_ids && application_ids?.length) {
         const filterData = RecommendedData?.filter((v) =>
