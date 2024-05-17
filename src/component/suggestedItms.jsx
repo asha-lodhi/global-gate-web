@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const SuggestedItems = (RecommendedList) => {
+const SuggestedItems = ({ RecommendedList }) => {
   const navigate = useNavigate();
 
   const redirectToProduct = (id) => {

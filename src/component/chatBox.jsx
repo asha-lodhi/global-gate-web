@@ -43,7 +43,7 @@ const ChatBox = () => {
         message: input,
       });
       const botMessage = {
-        text: response.data.response,
+        text: response?.data?.response,
         sender: "bot",
         timestamp: "Just now",
       };
@@ -57,7 +57,7 @@ const ChatBox = () => {
 
   const redirectToProduct = (id) => {
     navigate(`/company-profile/${id}`);
-    setShowChat(false)
+    setShowChat(false);
   };
 
   return (
