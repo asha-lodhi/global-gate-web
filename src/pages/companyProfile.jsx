@@ -16,6 +16,7 @@ import ProductCard from "../component/productCard";
 import Dals from "../assets/product/dals.jpeg";
 import { useParams } from "react-router-dom";
 import { RecommendedData } from "../constants";
+import axios from "axios";
 
 const CompanyProfile = () => {
   const navigate = useNavigate();
@@ -32,20 +33,31 @@ const CompanyProfile = () => {
   ];
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    const companyFilter = RecommendedData?.filter(
-      (v) => Number(v?.sellerId) === Number(companyID)
-    );
-    setCompanyDetail(companyFilter?.[0]);
+    if (companyID) {
+      fetchSuggestedList(companyID);
+      const companyFilter = RecommendedData?.filter(
+        (v) => Number(v?.sellerId) === Number(companyID)
+      );
+      setCompanyDetail(companyFilter?.[0]);
+    }
   }, [companyID]);
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-    const companies = RecommendedData?.filter(
-      (v) => Number(v?.sellerId) !== Number(companyID)
-    );
-    setCompanyList(companies);
-  }, [companyID]);
+  const fetchSuggestedList = async () => {
+    try {
+      const res = await axios.post("http://127.0.0.1:5001/query", {
+        application_no: companyID,
+      });
+      const { application_ids } = res?.data;
+      if (application_ids && application_ids?.length) {
+        const filterData = RecommendedData?.filter((v) =>
+          application_ids?.includes(String(v?.sellerId))
+        );
+        setCompanyList(filterData);
+      }
+    } catch (error) {
+      console.error("Error fetching bot response:", error);
+    }
+  };
 
   return (
     <div className="w-full">
@@ -187,7 +199,9 @@ const CompanyProfile = () => {
               By{" "}
               <span
                 class="text-[#01b5b6] hover:underline text-base font-bold ml-2 cursor-pointer"
-                onClick={() => navigate("/company-details")}
+                onClick={() =>
+                  navigate(`/company-details/${companyDetail?.sellerId}`)
+                }
               >
                 {companyDetail?.sellerName}
               </span>

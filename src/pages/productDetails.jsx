@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import SubNavbar from "../component/subNavbar";
 import { FaHome } from "react-icons/fa";
 import { FaStarHalfAlt, FaRegHeart, FaRupeeSign } from "react-icons/fa";
@@ -10,7 +10,6 @@ import food3 from "../assets/product/food-img-3.jpeg";
 import food4 from "../assets/product/food-img-4.jpeg";
 import food5 from "../assets/product/food-img-5.jpeg";
 import ProductAnalysis from "../component/productAnalysis";
-import ChatBox from "../component/chatBox";
 import { useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
@@ -98,8 +97,8 @@ const ProductDetails = () => {
             <div class="flex flex-col md:flex-row -mx-4">
               <div class="md:flex-1 px-4">
                 <div>
-                  <div class=" relative flex h-64 md:h-auto rounded-lg bg-gray-100 mb-4 gap-2  items-center justify-center align-middle">
-                    <div class="w-48 h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
+                  <div class=" relative flex h-64 md:h-auto rounded-lg bg-gray-100 mb-4 items-center justify-center align-middle">
+                    <div class="w-[20%] h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
                       {subFood?.map((item, index) => (
                         <div
                           key={index}
@@ -113,10 +112,10 @@ const ProductDetails = () => {
                         </div>
                       ))}
                     </div>
-                    <div class=" h-64 md:h-96 rounded-lg bg-gray-100  flex items-center justify-center align-middle ">
+                    <div class="w-[80%] h-64 md:h-96 rounded-lg bg-gray-100  flex items-center justify-center align-middle overflow-hidden">
                       <img
                         src={Food}
-                        className="object-contain rounded "
+                        className="w-full object-fill h-[100%]"
                         alt="product"
                       />
                     </div>
@@ -159,7 +158,7 @@ const ProductDetails = () => {
                   By{" "}
                   <span
                     class="text-[#01b5b6] hover:underline text-base font-bold ml-2 cursor-pointer"
-                    onClick={() => navigate("/company-details")}
+                    onClick={() => navigate(`/company-details/${27654}`)}
                   >
                     ABC Company
                   </span>

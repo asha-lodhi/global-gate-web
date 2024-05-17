@@ -6,9 +6,23 @@ import ProductCard from "./productCard";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 import { MdVerified } from "react-icons/md";
+import { useParams } from "react-router-dom";
+import { RecommendedData } from "../constants";
 
 const CompanyDetails = (props) => {
   const navigate = useNavigate();
+  const [companyDetail, setCompanyDetail] = React.useState({});
+  let { companyID } = useParams();
+
+  React.useEffect(() => {
+    if (companyID) {
+      const companyFilter = RecommendedData?.filter(
+        (v) => Number(v?.sellerId) === Number(companyID)
+      );
+      setCompanyDetail(companyFilter?.[0]);
+    }
+  }, [companyID]);
+
   return (
     <div className="flex flex-col w-full relative" id="HomeDiv">
       <img
@@ -52,7 +66,7 @@ const CompanyDetails = (props) => {
                   <div class="grid grid-cols-2">
                     <div class="px-4 py-2 font-semibold">Company Name</div>
                     <div class="px-4 py-2 flex ">
-                      ABC
+                      {companyDetail?.sellerName}
                       <MdVerified className="text-blue-600 text-[20px] mx-2" />
                     </div>
                   </div>

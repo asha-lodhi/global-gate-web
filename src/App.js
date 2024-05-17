@@ -21,7 +21,10 @@ function App() {
           />
           <Route path="/become-seller" element={<SellerAccount />} />
           <Route path="/add-product" element={<AddProduct />} />
-          <Route path="/company-details" element={<CompanyDetails />} />
+          <Route
+            path="/company-details/:companyID"
+            element={<CompanyDetails />}
+          />
           <Route
             path="/company-profile/:companyID"
             element={<CompanyProfile />}
