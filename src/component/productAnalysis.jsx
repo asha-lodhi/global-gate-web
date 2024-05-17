@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FoodChartImg from "../assets/product/food-chart-img.jpeg";
+import DemoApp from "../pages/demoApp";
 
 const ProductAnalysis = () => {
   const [openTab, setOpenTab] = useState("profile");
@@ -282,7 +283,7 @@ const ProductAnalysis = () => {
               </div>
             </div> */}
           </div>
-          <div className="flex justify-center items-center">
+          {/* <div className="flex justify-center items-center">
             <iframe
               title="Yearly_exports"
               width="1000"
@@ -291,7 +292,8 @@ const ProductAnalysis = () => {
               frameborder="0"
               allowFullScreen="true"
             ></iframe>
-          </div>
+          </div> */}
+          <DemoApp />
         </div>
       </div>
     </>
