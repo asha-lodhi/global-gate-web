@@ -147,12 +147,12 @@ const ChatBox = () => {
       <div className="mx-2 z-40 w-16 h-16 bg-[#00b5b6] fixed flex flex-col justify-center items-center flex-grow shadow-xl rounded-full overflow-hidden bottom-8 right-4">
         {!showChat ? (
           <MdOutlineChat
-            className="text-white text-3xl"
+            className="text-white text-3xl cursor-pointer"
             onClick={() => setShowChat(true)}
           />
         ) : (
           <RxCross2
-            className="text-white text-3xl"
+            className="text-white text-3xl cursor-pointer"
             onClick={() => setShowChat(false)}
           />
         )}

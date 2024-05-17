@@ -6,23 +6,26 @@ import SellerAccount from "./pages/sellerAccount";
 import AddProduct from "./pages/addProduct";
 import CompanyDetails from "./component/companyDetails";
 import CompanyProfile from "./pages/companyProfile";
+import Layout from "./component/layout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/product-details/:productId"
-          element={<ProductDetails />}
-        />
-        <Route path="/become-seller" element={<SellerAccount />} />
-        <Route path="/add-product" element={<AddProduct />} />
-        <Route path="/company-details" element={<CompanyDetails />} />
-        <Route
-          path="/company-profile/:companyID"
-          element={<CompanyProfile />}
-        />
-        <Route path="/" element={<DashBoard />} />
+        <Route path="/" element={<Layout />}>
+          <Route
+            path="/product-details/:productId"
+            element={<ProductDetails />}
+          />
+          <Route path="/become-seller" element={<SellerAccount />} />
+          <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/company-details" element={<CompanyDetails />} />
+          <Route
+            path="/company-profile/:companyID"
+            element={<CompanyProfile />}
+          />
+          <Route path="/" element={<DashBoard />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

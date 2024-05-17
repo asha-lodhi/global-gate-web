@@ -30,7 +30,7 @@ const ProductDetails = () => {
   return (
     <div className="w-full">
       <SubNavbar />
-      <ChatBox />
+      {/* <ChatBox /> */}
 
       <div class="">
         <div class="py-6">

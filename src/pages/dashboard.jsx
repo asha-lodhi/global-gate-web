@@ -10,7 +10,7 @@ const Dashboard = () => {
       <HomeSection />
       <AboutSection />
       <Products />
-      <ChatBox />
+      {/* <ChatBox /> */}
     </>
   );
 };
