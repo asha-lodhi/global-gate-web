@@ -53,10 +53,7 @@ const CompanyDetails = (props) => {
                     <div class="px-4 py-2 font-semibold">Owner Name</div>
                     <div class="px-4 py-2">Doe</div>
                   </div>
-                  {/* <div class="grid grid-cols-2">
-                    <div class="px-4 py-2 font-semibold">Gender</div>
-                    <div class="px-4 py-2">Female</div>
-                  </div> */}
+
                   <div class="grid grid-cols-2">
                     <div class="px-4 py-2 font-semibold">Contact No.</div>
                     <div class="px-4 py-2">+11 998001001</div>

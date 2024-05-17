@@ -40,7 +40,7 @@ const ProductAnalysis = () => {
 
   return (
     <>
-      <div className="max-w-screen-xl mx-auto  h-auto w-full md:flex ">
+      <div className="mx-auto  h-auto w-full md:flex ">
         <div className="max-w-screen-xl mx-auto py-8 pt-4 h-auto w-full">
           <div className="flex w-full justify-center items-center mb-4   sticky top-0 bg-white">
             <ul

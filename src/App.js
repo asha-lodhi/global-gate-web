@@ -5,6 +5,7 @@ import ProductDetails from "./pages/productDetails";
 import SellerAccount from "./pages/sellerAccount";
 import AddProduct from "./pages/addProduct";
 import CompanyDetails from "./component/companyDetails";
+import CompanyProfile from "./pages/companyProfile";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
         <Route path="/become-seller" element={<SellerAccount />} />
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/company-details" element={<CompanyDetails />} />
+        <Route
+          path="/company-profile/:companyID"
+          element={<CompanyProfile />}
+        />
         <Route path="/" element={<DashBoard />} />
       </Routes>
     </BrowserRouter>
