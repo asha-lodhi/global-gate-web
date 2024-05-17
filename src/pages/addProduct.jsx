@@ -16,7 +16,7 @@ const AddProduct = () => {
         <Navbar />
         <section class="min-h-screen z-10">
           <div class="py-4 px-8 mx-auto max-w-2xl lg:py-8 border my-4 bg-white rounded">
-            <h2 class="mb-4 text-xl font-bold text-gray-900 text-center">
+            <h2 class="mb-4 text-2xl font-bold text-gray-900 text-center">
               Add a new product
             </h2>
             <form action="#">
@@ -165,7 +165,7 @@ const AddProduct = () => {
               <div className="flex justify-around gap-6">
                 <button
                   type="submit"
-                  class="w-full inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center justify-center text-black bg-blue-200 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+                  class="w-full inline-flex items-center bg-indigo-600 px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center justify-center text-white rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
                 >
                   Add product
                 </button>

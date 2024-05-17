@@ -19,7 +19,8 @@ const SellerAccount = () => {
         <div className=" relative flex border-2 border-gray-200 rounded shadow-md  w-1/2 my-4 bg-white ">
           <div className=" absolute -top-4 -right-6 mx-2 z-40 w-16 h-16 bg-[#00b5b6]  flex flex-col justify-center items-center flex-grow shadow-xl rounded-full overflow-hidden ">
             <RxCross2
-              className="text-blue text-3xl"
+              className="text-blue text-3xl cursor-pointer"
+              color="#FFF"
               onClick={() => navigate("/")}
             />
           </div>
@@ -32,7 +33,7 @@ const SellerAccount = () => {
                 Or
                 <a
                   href="#"
-                  class=" ml-2 font-medium text-blue-600 hover:text-blue-500"
+                  class=" ml-2 font-semibold text-blue-600 hover:text-blue-500"
                 >
                   Login to your account
                 </a>

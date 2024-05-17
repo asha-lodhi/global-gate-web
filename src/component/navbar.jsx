@@ -20,7 +20,7 @@ const Navbar = () => {
           <span className="flex items-center space-x-3 ">
             <img
               src={MainLogo}
-              className="h-32 w-36"
+              className="h-32 w-36 cursor-pointer"
               alt="Logo"
               onClick={() => {
                 navigate("/");

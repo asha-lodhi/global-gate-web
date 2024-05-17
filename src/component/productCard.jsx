@@ -6,7 +6,7 @@ const ProductCard = ({ productImage }) => {
   return (
     <>
       <div
-        class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 "
+        class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 shadow-md mt-4"
         onClick={() => navigate(`/product-details/${123456}`)}
       >
         <img
@@ -14,7 +14,7 @@ const ProductCard = ({ productImage }) => {
           src={productImage}
           alt="food-img"
         />
-        <div class="px-3 py-3 border border-gray-400 overflow-hidden rounded-b bg-white">
+        <div class="px-3 py-3 border border-gray-100 overflow-hidden rounded-b bg-white">
           <div className="flex  justify-between items-center">
             <div className="flex">
               <div class="flex items-center bg-[#00B6B7] px-2 gap-1 h-[20px] rounded">

@@ -20,7 +20,8 @@ const CompanyDetails = (props) => {
         <div className=" relative  flex flex-col border-2 border-gray-200 rounded shadow-md  w-4/5 my-4 bg-white  justify-center items-center">
           <div className=" absolute -top-4 -right-6 mx-2 z-40 w-16 h-16 bg-[#00b5b6]  flex flex-col justify-center items-center flex-grow shadow-xl rounded-full overflow-hidden ">
             <RxCross2
-              className="text-blue text-3xl"
+              className="text-blue text-3xl cursor-pointer"
+              color="#FFF"
               onClick={() => navigate(-1)}
             />
           </div>
@@ -34,9 +35,8 @@ const CompanyDetails = (props) => {
 
           <div class="w-full md:w-9/12 mx-2 h-64  flex flex-col justify-center items-center">
             <div class="bg-white p-3 shadow-sm rounded-sm">
-              <div class="flex items-center  justify-between space-x-2 font-semibold text-gray-900 leading-8 py-2">
+              <div class="flex items-center justify-between space-x-2 font-semibold text-gray-900 leading-8 py-2">
                 <span class="tracking-wide text-xl font-semibold">
-                  {" "}
                   All About the company
                 </span>
                 <button className="bg-blue-400 rounded-xl px-4 py-1">
@@ -86,7 +86,7 @@ const CompanyDetails = (props) => {
           </div>
 
           <div class=" py-4 px-4 mx-auto text-center lg:py-6 lg:px-6">
-            <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+            <div class="mx-auto mb-6 max-w-screen-sm lg:mb-12">
               <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
                 Our Products
               </h2>
@@ -95,7 +95,7 @@ const CompanyDetails = (props) => {
                 elements built with the utility classes from Tailwind
               </p>
             </div>
-            <div className="flex flex-wrap justify-center  gap-2 lg:gap-4">
+            <div className="flex flex-wrap justify-center gap-2 lg:gap-4">
               {[1, 2, 3, 4].map((i) => (
                 <ProductCard productImage={Dals} />
               ))}
