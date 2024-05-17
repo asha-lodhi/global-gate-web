@@ -95,7 +95,7 @@ const CompanyDetails = (props) => {
                 elements built with the utility classes from Tailwind
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-2 lg:gap-4">
+            <div className="flex flex-wrap justify-center gap-2 lg:gap-4 pb-6">
               {[1, 2, 3, 4].map((i) => (
                 <ProductCard productImage={Dals} />
               ))}
