@@ -104,7 +104,7 @@ const ProductDetails = () => {
                       {subFood?.map((item, index) => (
                         <div
                           key={index}
-                          className="h-18 md:w-24 flex justify-center items-center"
+                          className="h-18 md:w-24 flex justify-center items-center cursor-pointer"
                         >
                           <img
                             src={item.img}
@@ -284,7 +284,7 @@ const ProductDetails = () => {
 
                   <button
                     type="button"
-                    class=" flex  items-center gap-2 h-12 px-6 py-2 font-semibold rounded-xl bg-orange-100 hover:bg-orange-500 text-orange-400 border border-orange-400"
+                    class=" flex  items-center gap-2 h-12 px-6 py-2 font-semibold rounded-xl bg-orange-100 hover:bg-orange-500 text-orange-400 hover:text-white border border-orange-400"
                   >
                     <FaCartPlus />
                     Add to Cart

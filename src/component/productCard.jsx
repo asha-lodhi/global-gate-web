@@ -6,7 +6,7 @@ const ProductCard = ({ productImage }) => {
   return (
     <>
       <div
-        class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 shadow-md mt-4"
+        class="max-w-sm rounded overflow-hidden bg-[#eeeeee] mx-2 shadow-md mt-4 cursor-pointer"
         onClick={() => navigate(`/product-details/${123456}`)}
       >
         <img
