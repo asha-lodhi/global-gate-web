@@ -3,16 +3,20 @@ import { LuSendHorizonal } from "react-icons/lu";
 import { MdOutlineChat } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import axios from "axios";
+import { LinkIt } from "react-linkify-it";
+import { useNavigate } from "react-router-dom";
 
 const ChatBox = () => {
+  const navigate = useNavigate();
   const [showChat, setShowChat] = useState(false);
   const [messages, setMessages] = useState([
     {
-      text: "Hi,  I'm here to help you.",
+      text: "Hi,  I'm here to help you 77676767676 No..",
       sender: "bot",
       timestamp: "2 min ago",
     },
   ]);
+
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
 
@@ -34,19 +38,26 @@ const ChatBox = () => {
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInput("");
 
-    try {
-      const response = await axios.post("https://api.example.com/chat", {
-        message: input,
-      });
-      const botMessage = {
-        text: response.data.reply,
-        sender: "bot",
-        timestamp: "Just now",
-      };
-      setMessages((prevMessages) => [...prevMessages, botMessage]);
-    } catch (error) {
-      console.error("Error fetching bot response:", error);
-    }
+    // try {
+    //   const response = await axios.post("https://api.example.com/chat", {
+    //     message: input,
+    //   });
+    //   const botMessage = {
+    //     text: response.data.reply,
+    //     sender: "bot",
+    //     timestamp: "Just now",
+    //   };
+    //   setMessages((prevMessages) => [...prevMessages, botMessage]);
+    // } catch (error) {
+    //   console.error("Error fetching bot response:", error);
+    // }
+  };
+
+  const phonePattern = /\b\d{5,}\b/;
+
+  const redirectToProduct = (id) => {
+    console.log("PRODUCT ID:", id);
+    navigate(`/product-details/${id}`);
   };
 
   return (
@@ -83,7 +94,26 @@ const ChatBox = () => {
                         : "bg-gray-300 rounded-r-lg rounded-bl-lg"
                     }`}
                   >
-                    <p className="break-all  text-sm">{message.text}</p>
+                    <LinkIt
+                      component={(match, key) => (
+                        <a
+                          className={`${
+                            message.sender === "user"
+                              ? "underline decoration-white cursor-pointer"
+                              : "underline decoration-blue-600 text-blue-600 cursor-pointer"
+                          }`}
+                          onClick={() => {
+                            redirectToProduct(match);
+                          }}
+                          key={key}
+                        >
+                          {match}
+                        </a>
+                      )}
+                      regex={phonePattern}
+                    >
+                      {message?.text}
+                    </LinkIt>
                   </div>
                   <span className="text-xs text-gray-500 leading-none">
                     {message.timestamp}
