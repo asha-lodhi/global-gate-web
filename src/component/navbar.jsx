@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLogo from "../assets/main-logo.png";
 import user from "../assets/user-image.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const [isBuyer, setIsBuyer] = useState(true);
   const navigate = useNavigate();
   const scrollTo = (id) => {
     const targetDiv = document.getElementById(id);
@@ -60,10 +61,27 @@ const Navbar = () => {
                   </span>
                 </li>
                 <li className="header-nav-bar">
+                  <div className="relative w-full group">
+                    <button className="py-2 px-3 text-white  md:bg-transparent md:p-0 cursor-pointer font-sansation   text-site  bg-white  peer flex items-center justify-between">
+                      Services
+                    </button>
+                    <div className="absolute z-[99] top-[100%] left-[50%] translate-x-[-50%] rounded-md overflow-hidden shadow-lg min-w-[150px] w-max peer-focus:visible peer-focus:opacity-100 opacity-0 invisible duration-200 p-1 bg-white dark:bg-white  border border-dimmed text-xs md:text-sm">
+                      <div className=" text-center border-b w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md">
+                        Consultant
+                      </div>
+
+                      <div className="text-center w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md">
+                        Courses
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li className="header-nav-bar">
                   <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
-                    Services
+                    Trends
                   </span>
                 </li>
+
                 <li className="header-nav-bar">
                   <span className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 cursor-pointer font-sansation">
                     Blogs
@@ -75,32 +93,34 @@ const Navbar = () => {
                     <img
                       className="w-full h-full rounded-full object-cover"
                       src={user}
-                      alt="user photo"
+                      alt="user"
                     />
                   </button>
                   <div className="absolute z-[99] top-[100%] left-[50%] translate-x-[-50%] rounded-md overflow-hidden shadow-lg min-w-[150px] w-max peer-focus:visible peer-focus:opacity-100 opacity-0 invisible duration-200 p-1 bg-white dark:bg-white  border border-dimmed text-xs md:text-sm">
-                    <div className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md">
-                      <span class="block text-sm text-black dark:text-black">
-                        Bonnie Green
-                      </span>
-                      <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                        name@flowbite.com
-                      </span>
+                    <div
+                      className={`  ${
+                        isBuyer ? "bg-white" : "bg-red-300"
+                      } w-full block cursor-pointer hover:bg-blue-200   hover:text-link px-3 py-2 rounded-md`}
+                      onClick={() => {
+                        setIsBuyer(false);
+                        navigate("/become-seller");
+                      }}
+                    >
+                      Seller
                     </div>
                     <div
-                      className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md"
-                      onClick={() => navigate("/become-seller")}
+                      className={`  ${
+                        isBuyer ? "bg-red-300" : "bg-white"
+                      } w-full block cursor-pointer hover:bg-blue-200   hover:text-link px-3 py-2 rounded-md`}
+                      onClick={() => setIsBuyer(true)}
                     >
-                      Become a Seller
+                      Buyer
                     </div>
                     <div
                       className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md"
                       onClick={() => navigate("/add-product")}
                     >
                       Add Product
-                    </div>
-                    <div className=" w-full block cursor-pointer hover:bg-blue-200 bg-white  hover:text-link px-3 py-2 rounded-md">
-                      Settings
                     </div>
                   </div>
                 </div>
