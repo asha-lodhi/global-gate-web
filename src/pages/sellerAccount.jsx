@@ -98,7 +98,7 @@ const SellerAccount = () => {
                       for="company"
                       class="block text-sm font-medium text-gray-700"
                     >
-                      Company Name
+                      Company Name(Optional)
                     </label>
                     <div class="mt-1">
                       <input
@@ -152,7 +152,7 @@ const SellerAccount = () => {
                     </div>
                   </div>
 
-                  <div>
+                  {/* <div>
                     <label
                       for="password"
                       class="block text-sm font-medium text-gray-700"
@@ -171,7 +171,7 @@ const SellerAccount = () => {
                       />
                       <FaRegEyeSlash className="relative top-2 right-6 text-xl" />
                     </div>
-                  </div>
+                  </div> */}
 
                   <div class="flex items-center justify-between">
                     <div class="flex items-center">

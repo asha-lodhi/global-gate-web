@@ -77,13 +77,13 @@ const ChatBox = () => {
                 )}
                 <div>
                   <div
-                    className={`p-3 rounded-lg ${
+                    className={`p-2 rounded-lg   ${
                       message.sender === "user"
                         ? "bg-blue-600 text-white rounded-l-lg rounded-br-lg"
                         : "bg-gray-300 rounded-r-lg rounded-bl-lg"
                     }`}
                   >
-                    <p className="text-sm">{message.text}</p>
+                    <p className="break-all  text-sm">{message.text}</p>
                   </div>
                   <span className="text-xs text-gray-500 leading-none">
                     {message.timestamp}
@@ -97,9 +97,9 @@ const ChatBox = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="bg-gray-300 p-4 flex">
+          <div className="relative p-2 flex min-h-10 max-h-24 items-center w-full border-t rounded px-3 text-sm ">
             <input
-              className="flex items-center h-10 w-full rounded px-3 text-sm"
+              className="flex items-center min-h-10 max-h-auto w-4/5 rounded px-3 text-sm outline-none overflow-y-auto"
               type="text"
               placeholder="Type your message…"
               value={input}
@@ -107,7 +107,7 @@ const ChatBox = () => {
               onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
             />
             <LuSendHorizonal
-              className="text-3xl text-center top-1 relative right-10 text-blue-300"
+              className=" absolute text-3xl text-center top-3  right-8 text-blue-300 bg-white"
               onClick={handleSendMessage}
             />
           </div>
