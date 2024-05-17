@@ -38,19 +38,19 @@ const ChatBox = () => {
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInput("");
 
-    // try {
-    //   const response = await axios.post("https://api.example.com/chat", {
-    //     message: input,
-    //   });
-    //   const botMessage = {
-    //     text: response.data.reply,
-    //     sender: "bot",
-    //     timestamp: "Just now",
-    //   };
-    //   setMessages((prevMessages) => [...prevMessages, botMessage]);
-    // } catch (error) {
-    //   console.error("Error fetching bot response:", error);
-    // }
+    try {
+      const response = await axios.post("http://127.0.0.1:5001/query", {
+        message: input,
+      });
+      const botMessage = {
+        text: response.data.response,
+        sender: "bot",
+        timestamp: "Just now",
+      };
+      setMessages((prevMessages) => [...prevMessages, botMessage]);
+    } catch (error) {
+      console.error("Error fetching bot response:", error);
+    }
   };
 
   const phonePattern = /\b\d{5,}\b/;
