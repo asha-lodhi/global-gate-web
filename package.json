@@ -2,6 +2,7 @@
   "name": "global-gate-web",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5001",
   "dependencies": {
     "@canvasjs/charts": "^3.8.6",
     "@canvasjs/react-charts": "^1.0.2",
