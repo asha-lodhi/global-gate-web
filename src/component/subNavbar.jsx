@@ -8,7 +8,7 @@ const SubNavbar = () => {
 
   return (
     <>
-      <nav class="bg-transparent z-10 border-b border-black md:pb-0 pb-6">
+      <nav class="bg-transparent z-10 border-b border-gray-200 md:pb-0 pb-6">
         <div class="w-[90%] flex flex-wrap items-center justify-between mx-auto bg-transparent gap-2">
           <span className="flex items-center space-x-3">
             <img

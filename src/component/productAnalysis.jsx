@@ -113,11 +113,11 @@ const ProductAnalysis = () => {
               <li className="" role="presentation">
                 <button
                   onClick={() => {
-                    setOpenTab("awards");
-                    scrollToTarget("awards");
+                    setOpenTab("awards-1");
+                    scrollToTarget("awards-1");
                   }}
                   className={`  px-10 text-black inline-block p-4 border-b-4 rounded-t-lg text-[18px] font-poppins ${
-                    openTab === "awards" ? "border-[#00b6b7] font-semibold" : ""
+                    openTab === "awards-1" ? "border-[#00b6b7] font-semibold" : ""
                   }`}
                   id="settings-tab"
                   data-tabs-target="#settings"
