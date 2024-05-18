@@ -58,6 +58,20 @@ const ChatBox = () => {
   const redirectToProduct = (id) => {
     navigate(`/company-profile/${id}`);
     setShowChat(false);
+    sendProductID(id);
+  };
+
+  const sendProductID = async (id) => {
+    try {
+      const res = await axios.post(
+        "http://127.0.0.1:5001/recommended_application_no",
+        {
+          application_no: id,
+        }
+      );
+    } catch (error) {
+      console.error("Error fetching bot response:", error);
+    }
   };
 
   return (
