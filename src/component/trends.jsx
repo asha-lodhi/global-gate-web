@@ -18,7 +18,7 @@ const Trends = () => {
         height="100%"
         className=" fixed  left-0 bottom-0 right-0 "
         width="100%"
-        src="https://app.powerbi.com/view?r=eyJrIjoiYjRjMDhiMjYtMzhmNy00MTZiLWJiMmYtNzcxOTYxZGE5NmUyIiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D"
+        src="https://app.powerbi.com/view?r=eyJrIjoiZWE1YWZlN2MtMTA5OC00NDIwLThlMTctM2M2ZDJlOGYzN2NmIiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D"
         frameborder="0"
         allowFullScreen="true"
       ></iframe>
