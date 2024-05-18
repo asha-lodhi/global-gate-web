@@ -40,7 +40,7 @@ const ChatBox = () => {
 
     try {
       const response = await axios.post("http://127.0.0.1:5001/query", {
-        message: input,
+        query_str: input,
       });
       const botMessage = {
         text: response?.data?.response,
