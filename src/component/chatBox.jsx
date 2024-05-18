@@ -39,7 +39,7 @@ const ChatBox = () => {
       const companyFilter = RecommendedData?.filter(
         (v) => Number(v?.sellerId) === Number(companyID)
       );
-      if (messages?.length > 1) {
+      if (messages?.length > 1 && companyFilter?.[0]) {
         setCompanyNameInChat(companyFilter?.[0]);
       }
     }
