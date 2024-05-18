@@ -4,10 +4,13 @@ import { MdOutlineChat } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import axios from "axios";
 import { LinkIt } from "react-linkify-it";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { RecommendedData } from "../constants";
 
 const ChatBox = () => {
   const navigate = useNavigate();
+  let { companyID } = useParams();
+  const location = useLocation();
   const [showChat, setShowChat] = useState(false);
   const [messages, setMessages] = useState([
     {
@@ -31,25 +34,68 @@ const ChatBox = () => {
     scrollToBottom();
   }, [messages]);
 
+  useEffect(() => {
+    if (companyID) {
+      const companyFilter = RecommendedData?.filter(
+        (v) => Number(v?.sellerId) === Number(companyID)
+      );
+      if (messages?.length > 1) {
+        setCompanyNameInChat(companyFilter?.[0]);
+      }
+    }
+  }, [companyID]);
+
+  let timerOne = null;
+  const setCompanyNameInChat = (data) => {
+    clearTimeout(timerOne);
+    timerOne = setTimeout(() => {
+      const botMessage = {
+        text: `${data?.sellerName}: How can I help you?`,
+        sender: "bot",
+        timestamp: "Just now",
+      };
+      setMessages((prevMessages) => [...prevMessages, botMessage]);
+    }, 1000);
+  };
+
   const handleSendMessage = async () => {
     if (!input.trim()) return;
 
     const newMessage = { text: input, sender: "user", timestamp: "Just now" };
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInput("");
-
-    try {
-      const response = await axios.post("http://127.0.0.1:5001/query", {
-        message: input,
-      });
-      const botMessage = {
-        text: response?.data?.response,
-        sender: "bot",
-        timestamp: "Just now",
-      };
-      setMessages((prevMessages) => [...prevMessages, botMessage]);
-    } catch (error) {
-      console.error("Error fetching bot response:", error);
+    if (location?.pathname?.includes("company-profile") && companyID) {
+      try {
+        const response = await axios.post(
+          "http://127.0.0.1:5001/submit-query",
+          {
+            message: input,
+            company_id: companyID,
+          }
+        );
+        const botMessage = {
+          text: response?.data?.response,
+          sender: "bot",
+          timestamp: "Just now",
+        };
+        setMessages((prevMessages) => [...prevMessages, botMessage]);
+      } catch (error) {
+        console.error("Error fetching bot response:", error);
+      }
+    } else {
+      try {
+        const response = await axios.post("http://127.0.0.1:5001/query", {
+          message: input,
+        });
+        const botMessage = {
+          text: response?.data?.response,
+          sender: "bot",
+          timestamp: "Just now",
+        };
+        setMessages((prevMessages) => [...prevMessages, botMessage]);
+      } catch (error) {
+        console.error("Error fetching bot response:", error);
+      }
     }
   };
 
@@ -58,20 +104,6 @@ const ChatBox = () => {
   const redirectToProduct = (id) => {
     navigate(`/company-profile/${id}`);
     setShowChat(false);
-    sendProductID(id);
-  };
-
-  const sendProductID = async (id) => {
-    try {
-      const res = await axios.post(
-        "http://127.0.0.1:5001/recommended_application_no",
-        {
-          application_no: id,
-        }
-      );
-    } catch (error) {
-      console.error("Error fetching bot response:", error);
-    }
   };
 
   return (
