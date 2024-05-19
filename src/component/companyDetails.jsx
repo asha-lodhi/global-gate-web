@@ -8,6 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { MdVerified } from "react-icons/md";
 import { useParams } from "react-router-dom";
 import { RecommendedData } from "../constants";
+import Food from "../assets/product/food-img-1.jpeg";
+import Apple from "../assets/product/apple-1.jpeg";
+import Grapes from "../assets/product/grapes-1.jpeg";
 
 const CompanyDetails = (props) => {
   const navigate = useNavigate();
@@ -22,6 +25,12 @@ const CompanyDetails = (props) => {
       setCompanyDetail(companyFilter?.[0]);
     }
   }, [companyID]);
+  const FoodList = [
+    { img: Food, title: "Basmati Rice" },
+    { img: Apple, title: "Apple" },
+    { img: Grapes, title: "Basmati Rice" },
+    { img: Dals, title: "Pulse" },
+  ];
 
   return (
     <div className="flex flex-col w-full relative" id="HomeDiv">
@@ -117,8 +126,8 @@ const CompanyDetails = (props) => {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-2 lg:gap-4 pb-6">
-              {[1, 2, 3, 4].map((i) => (
-                <ProductCard productImage={Dals} />
+              {FoodList.map((i) => (
+                <ProductCard productDetail={i} />
               ))}
             </div>
           </div>

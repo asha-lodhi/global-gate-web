@@ -17,6 +17,8 @@ import Dals from "../assets/product/dals.jpeg";
 import { useParams } from "react-router-dom";
 import { RecommendedData } from "../constants";
 import axios from "axios";
+import Apple from "../assets/product/apple-1.jpeg";
+import Grapes from "../assets/product/grapes-1.jpeg";
 
 const CompanyProfile = () => {
   const navigate = useNavigate();
@@ -31,6 +33,13 @@ const CompanyProfile = () => {
   //   { id: 4, img: food5 },
   //   { id: 5, img: Food },
   // ];
+
+  const FoodList = [
+    { img: Food, title: "Basmati Rice" },
+    { img: Apple, title: "Apple" },
+    { img: Grapes, title: "Basmati Rice" },
+    { img: Dals, title: "Pulse" },
+  ];
 
   useEffect(() => {
     if (companyID) {
@@ -350,8 +359,8 @@ const CompanyProfile = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center  gap-2 lg:gap-4 -top-20">
-            {[1, 2, 3, 4].map((i) => (
-              <ProductCard productImage={Dals} />
+            {FoodList.map((i) => (
+              <ProductCard productDetail={i} />
             ))}
           </div>
         </div>
