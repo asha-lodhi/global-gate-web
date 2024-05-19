@@ -5,7 +5,7 @@ import Apple from "../assets/product/apple-1.jpeg";
 import Grapes from "../assets/product/grapes-1.jpeg";
 import Dals from "../assets/product/dals.jpeg";
 import bevarage from "../assets/product/bevarage-img-1.jpeg";
-import RedWine from "../assets/product/redWine.jpeg";
+import RedWine1 from "../assets/product/redWine.jpg";
 import mtnDew from "../assets/product/mtnDew.jpeg";
 import Thumbsup from "../assets/product/thumpsUp.jpeg";
 
@@ -17,7 +17,7 @@ const FoodList = [
 ];
 const bevarageList = [
   { img: bevarage, title: "Coca-cola" },
-  { img: RedWine, title: "Red Wine" },
+  { img: RedWine1, title: "Red Wine" },
   { img: mtnDew, title: "Mountain Dew" },
   { img: Thumbsup, title: "Thumbs-up" },
 ];

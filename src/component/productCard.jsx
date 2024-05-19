@@ -10,7 +10,7 @@ const ProductCard = (props) => {
         onClick={() => navigate(`/product-details/${123456}`)}
       >
         <img
-          class="w-full my-10 px-2 h-[220px] object-contain"
+          class="w-full my-10 px-2 h-[220px] object-contain mix-blend-multiply"
           src={props?.productDetail?.img}
           alt="food-img"
         />
@@ -57,7 +57,9 @@ const ProductCard = (props) => {
               </span>
             </div>
           </div>
-          <div className="my-2 font-sansation text-left">{props?.productDetail?.title}</div>
+          <div className="my-2 font-sansation text-left">
+            {props?.productDetail?.title}
+          </div>
           <div class="flex items-center  gap-4 ">
             <div className="flex">
               <svg
