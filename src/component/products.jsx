@@ -12,7 +12,7 @@ import Thumbsup from "../assets/product/thumpsUp.jpeg";
 const FoodList = [
   { img: Food, title: "Basmati Rice" },
   { img: Apple, title: "Apple" },
-  { img: Grapes, title: "Basmati Rice" },
+  { img: Grapes, title: "Grapes" },
   { img: Dals, title: "Pulse" },
 ];
 const bevarageList = [

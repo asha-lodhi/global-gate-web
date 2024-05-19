@@ -37,7 +37,7 @@ const CompanyProfile = () => {
   const FoodList = [
     { img: Food, title: "Basmati Rice" },
     { img: Apple, title: "Apple" },
-    { img: Grapes, title: "Basmati Rice" },
+    { img: Grapes, title: "Grapes" },
     { img: Dals, title: "Pulse" },
   ];
 
