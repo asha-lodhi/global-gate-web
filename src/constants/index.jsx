@@ -37,16 +37,19 @@ export const RecommendedData = [
     sellerId: 27645,
     sellerName: "Megha MSE",
     img: food4,
+    subImg: [food2, food3, food4, food5],
   },
   {
     sellerId: 27646,
     sellerName: "Aparna Pvt",
     img: food5,
+    subImg: [food2, food3, food4, food5],
   },
   {
     sellerId: 27647,
     sellerName: "Isha Ltd",
     img: food2,
+    subImg: [food2, food3, food4, food5],
   },
   {
     sellerId: 27648,
@@ -64,16 +67,19 @@ export const RecommendedData = [
     sellerId: 27650,
     sellerName: "Neha MSE",
     img: food5,
+    subImg: [food2, food3, food4, food5],
   },
   {
     sellerId: 27651,
     sellerName: "Sagar Pvt",
     img: Food,
+    subImg: [food2, food3, food4, food5],
   },
   {
     sellerId: 27652,
     sellerName: "Ankit Ltd",
     img: food2,
+    subImg: [food2, food3, food4, food5],
   },
   {
     sellerId: 27653,
