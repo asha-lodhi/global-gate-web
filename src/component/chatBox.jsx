@@ -67,10 +67,9 @@ const ChatBox = () => {
     if (location?.pathname?.includes("company-profile") && companyID) {
       try {
         const response = await axios.post(
-          "http://127.0.0.1:5001/submit-query",
+          "http://127.0.0.1:5001/upload_query",
           {
-            message: input,
-            company_id: companyID,
+            query_str: input,
           }
         );
         const botMessage = {
@@ -85,7 +84,7 @@ const ChatBox = () => {
     } else {
       try {
         const response = await axios.post("http://127.0.0.1:5001/query", {
-          message: input,
+          query_str: input,
         });
         const botMessage = {
           text: response?.data?.response,
