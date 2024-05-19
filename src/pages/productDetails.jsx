@@ -5,10 +5,10 @@ import { FaStarHalfAlt, FaRegHeart, FaRupeeSign } from "react-icons/fa";
 import { FaStar, FaCartPlus } from "react-icons/fa6";
 import { IoMdShare } from "react-icons/io";
 import Food from "../assets/product/food-img-1.jpeg";
-import food2 from "../assets/product/food-img-2.jpeg";
-import food3 from "../assets/product/food-img-3.jpeg";
-import food4 from "../assets/product/food-img-4.jpeg";
-import food5 from "../assets/product/food-img-5.jpeg";
+import food2 from "../assets/product/rice-img-2.jpeg";
+import food3 from "../assets/product/rice-img-3.jpeg";
+import food4 from "../assets/product/rice-img-4.jpeg";
+import food5 from "../assets/product/rice-img-1.jpeg";
 import ProductAnalysis from "../component/productAnalysis";
 import { useNavigate } from "react-router-dom";
 
@@ -98,7 +98,7 @@ const ProductDetails = () => {
               <div class="md:flex-1 px-4">
                 <div>
                   <div class=" relative flex h-64 md:h-auto rounded-lg bg-gray-100 mb-4 items-center justify-center align-middle">
-                    <div class="w-[20%] h-64 md:h-auto rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
+                    <div class="w-[20%] h-64 gap-4 md:h-auto rounded-lg bg-gray-100  flex items-center justify-around flex-col space-y-1">
                       {subFood?.map((item, index) => (
                         <div
                           key={index}

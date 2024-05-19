@@ -78,6 +78,7 @@ const ChatBox = () => {
           timestamp: "Just now",
         };
         setMessages((prevMessages) => [...prevMessages, botMessage]);
+        scrollToBottom()
       } catch (error) {
         console.error("Error fetching bot response:", error);
       }
@@ -92,6 +93,7 @@ const ChatBox = () => {
           timestamp: "Just now",
         };
         setMessages((prevMessages) => [...prevMessages, botMessage]);
+        scrollToBottom()
       } catch (error) {
         console.error("Error fetching bot response:", error);
       }

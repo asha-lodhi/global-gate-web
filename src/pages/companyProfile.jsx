@@ -24,13 +24,13 @@ const CompanyProfile = () => {
   const [companyDetail, setCompanyDetail] = React.useState({});
   const [companyList, setCompanyList] = React.useState([]);
 
-  const subFood = [
-    { id: 1, img: food2 },
-    { id: 2, img: food3 },
-    { id: 3, img: food4 },
-    { id: 4, img: food5 },
-    { id: 5, img: Food },
-  ];
+  // const subFood = [
+  //   { id: 1, img: food2 },
+  //   { id: 2, img: food3 },
+  //   { id: 3, img: food4 },
+  //   { id: 4, img: food5 },
+  //   { id: 5, img: Food },
+  // ];
 
   useEffect(() => {
     if (companyID) {
@@ -135,13 +135,13 @@ const CompanyProfile = () => {
                 <div className="h-[400px] bg-gray-100  rounded-lg">
                   <div class="relative flex h-full md:h-full rounded-lg bg-gray-100 mb-4 justify-center">
                     <div class="w-[20%] h-64 md:h-auto rounded-lg bg-gray-100 flex items-center justify-around flex-col space-y-1">
-                      {subFood?.map((item, index) => (
+                      {companyDetail?.subImg?.map((item, index) => (
                         <div
                           key={index}
                           className="h-18 md:w-24 flex justify-center items-center"
                         >
                           <img
-                            src={item.img}
+                            src={item}
                             className="object-contain rounded"
                             alt="product"
                           />

@@ -3,21 +3,35 @@ import food2 from "../assets/product/food-img-2.jpeg";
 import food3 from "../assets/product/food-img-3.jpeg";
 import food4 from "../assets/product/food-img-4.jpeg";
 import food5 from "../assets/product/food-img-5.jpeg";
+import Apple1 from "../assets/product/apple-1.jpeg";
+import Apple2 from "../assets/product/apple-2.jpeg";
+import Apple3 from "../assets/product/apple-3.jpeg";
+import Apple4 from "../assets/product/apple-4.jpeg";
+import Apple5 from "../assets/product/apple-5.jpeg";
+import Grapes1 from "../assets/product/grapes-1.jpeg";
+import Grapes2 from "../assets/product/grapes-2.jpeg";
+import Grapes3 from "../assets/product/grapes-3.jpeg";
+import Grapes4 from "../assets/product/grapes-4.jpeg";
+import Grapes5 from "../assets/product/grapes-5.jpeg";
+
 export const RecommendedData = [
   {
     sellerId: 27642,
     sellerName: "Yash Optimistic",
-    img: Food,
+    img: Grapes1,
+    subImg: [Grapes1, Grapes2, Grapes4, Grapes3, Grapes5],
   },
   {
     sellerId: 27643,
     sellerName: "Surya Con",
-    img: food2,
+    img: Grapes2,
+    subImg: [Grapes1, Grapes2, Grapes4, Grapes3, Grapes5],
   },
   {
     sellerId: 27644,
     sellerName: "Param Sellers",
-    img: food3,
+    img: Apple4,
+    subImg: [Apple5, Apple2, Apple1, Apple3, Apple4],
   },
   {
     sellerId: 27645,
@@ -37,12 +51,14 @@ export const RecommendedData = [
   {
     sellerId: 27648,
     sellerName: "Arpit Enterprises",
-    img: food3,
+    img: Apple3,
+    subImg: [Apple5, Apple2, Apple1, Apple3, Apple4],
   },
   {
     sellerId: 27649,
     sellerName: "Sinchan King",
-    img: food4,
+    img: Apple2,
+    subImg: [Apple5, Apple2, Apple1, Apple3, Apple4],
   },
   {
     sellerId: 27650,
@@ -62,11 +78,13 @@ export const RecommendedData = [
   {
     sellerId: 27653,
     sellerName: "Aryaman Enterprises",
-    img: food3,
+    img: Grapes3,
+    subImg: [Grapes1, Grapes2, Grapes4, Grapes3, Grapes5],
   },
   {
     sellerId: 27654,
     sellerName: "Sayan Telecom",
-    img: food4,
+    img: Apple1,
+    subImg: [Apple5, Apple2, Apple1, Apple3, Apple4],
   },
 ];

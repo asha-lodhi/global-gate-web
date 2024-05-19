@@ -3,9 +3,15 @@ import HeroImage from "../assets/hero-section-image.jpeg";
 import Navbar from "./navbar";
 
 const HomeSection = () => {
+  const scrollTo = (id) => {
+    const targetDiv = document.getElementById(id);
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
-      <div className="flex flex-col w-full h-screen relative" id='HomeDiv'>
+      <div className="flex flex-col w-full h-screen relative" id="HomeDiv">
         <img
           src={HeroImage}
           alt="services"
@@ -23,7 +29,10 @@ const HomeSection = () => {
             Connecting food and beverage companies worldwide with AI-powered
             insights, efficient operations, and personalized experiences.
           </span>
-          <button className="text-[20px] w-[180px] bg-transparent text-white font-poppins px-8 py-1 rounded-md border-2 border-white mt-12 font-sansation">
+          <button
+            className="text-[20px] w-[180px] bg-transparent text-white font-poppins px-8 py-1 rounded-md border-2 border-white mt-12 font-sansation"
+            onClick={() => scrollTo("ProductDiv")}
+          >
             Explore
           </button>
         </div>
