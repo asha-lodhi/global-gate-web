@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProductCard from "./productCard";
 
-const MySwiperComponent = ({ productImage }) => {
+const MySwiperComponent = ({ productList }) => {
   return (
     <Swiper
       spaceBetween={10}
@@ -33,9 +33,9 @@ const MySwiperComponent = ({ productImage }) => {
       centerInsufficientSlides={true}
       className="flex"
     >
-      {[1, 2, 3, 4, 5, 6, 7].map((i, index) => (
+      {productList?.map((i, index) => (
         <SwiperSlide key={index}>
-          <ProductCard productImage={productImage} />
+          <ProductCard productDetail={i} />
         </SwiperSlide>
       ))}
     </Swiper>

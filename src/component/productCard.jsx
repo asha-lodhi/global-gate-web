@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ productImage }) => {
+const ProductCard = (props) => {
   const navigate = useNavigate();
   return (
     <>
@@ -10,8 +10,8 @@ const ProductCard = ({ productImage }) => {
         onClick={() => navigate(`/product-details/${123456}`)}
       >
         <img
-          class="w-full my-10 px-2 h-auto object-contain"
-          src={productImage}
+          class="w-full my-10 px-2 h-[220px] object-contain"
+          src={props?.productDetail?.img}
           alt="food-img"
         />
         <div class="px-3 py-3 border border-gray-100 overflow-hidden rounded-b bg-white">
@@ -57,7 +57,7 @@ const ProductCard = ({ productImage }) => {
               </span>
             </div>
           </div>
-          <div className="my-2 font-sansation text-left">Basmati rice</div>
+          <div className="my-2 font-sansation text-left">{props?.productDetail?.title}</div>
           <div class="flex items-center  gap-4 ">
             <div className="flex">
               <svg
